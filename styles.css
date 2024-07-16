@@ -1,1 +1,20 @@
 /* css styles */
+.abstract {
+  text-align: justify;
+}
+
+.paper-title {
+  font-size: 2em;
+  font-weight: bold;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  text-align: right;
+}
+
+.paper-entry {
+  border-radius: 25px;
+  padding-right: 1.5em;
+  padding-top: 0.5em;
+}
+
