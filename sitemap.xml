@@ -2,14 +2,18 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://bendahmen.github.io/index.html</loc>
-    <lastmod>2024-07-17T12:53:02.228Z</lastmod>
-  </url>
-  <url>
-    <loc>https://bendahmen.github.io/research.html</loc>
-    <lastmod>2024-07-17T12:53:02.232Z</lastmod>
+    <lastmod>2024-07-17T21:14:13.141Z</lastmod>
   </url>
   <url>
     <loc>https://bendahmen.github.io/about.html</loc>
-    <lastmod>2024-07-17T12:53:02.212Z</lastmod>
+    <lastmod>2024-07-17T21:14:13.121Z</lastmod>
+  </url>
+  <url>
+    <loc>https://bendahmen.github.io/research.html</loc>
+    <lastmod>2024-07-17T21:14:13.145Z</lastmod>
+  </url>
+  <url>
+    <loc>https://bendahmen.github.io/cv.html</loc>
+    <lastmod>2024-07-17T21:14:13.125Z</lastmod>
   </url>
 </urlset>
