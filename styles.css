@@ -1,6 +1,7 @@
 /* css styles */
 .abstract {
   text-align: justify;
+  font-family: serif;
 }
 
 .paper-title {
@@ -18,3 +19,4 @@
   padding-top: 0.5em;
 }
 
+a {text-decoration: none; }
