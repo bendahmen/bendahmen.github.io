@@ -1,22 +1,66 @@
 /* css styles */
-.abstract {
-  text-align: justify;
-  font-family: serif;
-}
-
-.paper-title {
-  font-size: 2em;
-  font-weight: bold;
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
-  text-align: right;
-}
-
+/* overall container styling */
 .paper-entry {
-  border-radius: 25px;
-  padding-right: 1.5em;
-  padding-top: 0.5em;
+  margin-bottom: 1.5rem;
+}
+
+/* make the summary look like a header + inline button */
+.paper-details summary {
+  list-style: none;              /* remove default arrow bullet */
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+  background: #f7f7f7;
+  border-radius: 0.5rem;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+/* restore the default triangle, but styled */
+.paper-details summary::marker {
+  content: "▶";
+  display: inline-block;
+  margin-right: 0.5rem;
+  transform: rotate(0deg);
+  transition: transform 0.2s ease-in-out;
+}
+.paper-details[open] summary::marker {
+  transform: rotate(90deg);
+}
+
+/* the PDF button in the summary */
+.pdf-button {
+  font-size: 0.85rem;
+  text-decoration: none;
+  background: #ddd;
+  padding: 0.25em 0.5em;
+  border-radius: 0.25em;
+}
+.pdf-button:hover {
+  background: #ccc;
+}
+
+/* hidden by default, revealed when open */
+.paper-details .abstract,
+.paper-details .paper-plot {
+  padding: 1rem;
+  border: 1px solid #eee;
+  border-top: none;
+}
+
+/* abstract full-width block */
+.paper-details .abstract {
+  background: #fff;
+  margin-bottom: 1rem;
+}
+
+/* plot full-width block */
+.paper-details .paper-plot img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 a {text-decoration: none; }
