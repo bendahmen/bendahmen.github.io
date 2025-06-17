@@ -1,36 +1,34 @@
-/* css styles */
-/* overall container styling */
 .paper-entry {
+  padding-bottom: 1.5rem;
   margin-bottom: 1.5rem;
 }
 
-/* make the summary look like a header + inline button */
+/* 2) Tidy up the <summary> — no background box, stack title + buttons vertically */
 .paper-details summary {
-  list-style: none;              /* remove default arrow bullet */
+  list-style: none;        /* remove the default marker */
   cursor: pointer;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0.5rem 1rem;
-  background: #f7f7f7;
-  border-radius: 0.5rem;
+  flex-direction: column;  /* stack title and buttons */
+  align-items: flex-start;
+  padding: 0;              /* let the spacing come from the title & buttons */
+  margin-bottom: 0.5rem;   /* space before the abstract when open */
+  background: none;        /* remove the gray box */
+  border-radius: 0;
   font-size: 1.25rem;
   font-weight: bold;
 }
 
-/* restore the default triangle, but styled */
+/* keep the little triangle marker for collapse/expand */
 .paper-details summary::marker {
   content: "▶";
-  display: inline-block;
   margin-right: 0.5rem;
-  transform: rotate(0deg);
   transition: transform 0.2s ease-in-out;
 }
 .paper-details[open] summary::marker {
   transform: rotate(90deg);
 }
 
-/* the PDF and slides button in the summary */
+/* 3) Buttons now live in a row *below* the title */
 .pdf-button,
 .slides-button {
   font-size: 0.85rem;
@@ -38,37 +36,35 @@
   background: #ddd;
   padding: 0.25em 0.5em;
   border-radius: 0.25em;
+  display: inline-flex;
+  align-items: center;
+  margin-top: 0.5rem;      /* lift them below the title */
+  margin-right: 0.5rem;    /* space between buttons */
 }
 .pdf-button:hover,
 .slides-button:hover {
   background: #ccc;
 }
-.pdf-button::before {
-  content: "📄";
-}
-.slides-button::before {
-  content: "📈";  
-}
+.pdf-button::before { content: "📄"; margin-right: 0.25em; }
+.slides-button::before { content: "📈"; margin-right: 0.25em; }
 
-/* hidden by default, revealed when open */
+/* 4) Details content (abstract + plot) unchanged */
 .paper-details .abstract,
 .paper-details .paper-plot {
   padding: 1rem;
   border: 1px solid #eee;
   border-top: none;
 }
-
-/* abstract full-width block */
 .paper-details .abstract {
   background: #fff;
   margin-bottom: 1rem;
 }
-
-/* plot full-width block */
 .paper-details .paper-plot img {
   width: 100%;
   height: auto;
   display: block;
 }
-
-a {text-decoration: none; }
+.paper-details summary .paper-title {
+  color: inherit !important;
+  text-decoration: none !important;
+}
