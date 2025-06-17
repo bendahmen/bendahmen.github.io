@@ -30,16 +30,24 @@
   transform: rotate(90deg);
 }
 
-/* the PDF button in the summary */
-.pdf-button {
+/* the PDF and slides button in the summary */
+.pdf-button,
+.slides-button {
   font-size: 0.85rem;
   text-decoration: none;
   background: #ddd;
   padding: 0.25em 0.5em;
   border-radius: 0.25em;
 }
-.pdf-button:hover {
+.pdf-button:hover,
+.slides-button:hover {
   background: #ccc;
+}
+.pdf-button::before {
+  content: "📄";
+}
+.slides-button::before {
+  content: "📈";  
 }
 
 /* hidden by default, revealed when open */
