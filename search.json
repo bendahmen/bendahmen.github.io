@@ -1,26 +1,5 @@
 [
   {
-    "objectID": "research.html",
-    "href": "research.html",
-    "title": "Research",
-    "section": "",
-    "text": "Student Employment in England after the Maintenance Grant Removal  PDF\n\n\nIn 2016 the UK removed a living cost grant for university students. Motivated by a large increase in student employment after the grant was removed, I estimate whether the loss in income pushed students to work during university. I use two Difference-in-Differences designs, the first compares students to the regular labor market, and the second splits students by grant eligibility. Although student employment increased compared to the regular labor market, the increase is common to eligible and ineligible students. My results suggest that the maintenance grant removal did not cause the increase in student employment.\n\n\n\n\n\n\n\n\n\n Inequality in Internships  Slides\n\n\nInternships may play an important role in shaping labour market inequality. Using Dutch admin data, we show that the richest university students are 39% more likely to do an internship than the poorest students. We explore what creates this difference and what consequences it has on students’ careers. Ability does not explain the difference, but the opportunity costs of doing an internship could be important. After graduation, internships are linked to significantly higher earnings and contribute to intergenerational immobility. In the future, we plan to find a causal strategy to estimate internship returns, and analyse how personal networks help students find internships."
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "I am an Economics PhD Student at LSE, interested in Public and Labor Economics."
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Ben Dahmen",
-    "section": "",
-    "text": "I am a third-year Economics PhD Student at LSE, who is interested in Public and Labor Economics. I hold an MSc in Economics from LSE and a BSc in Economics and Business from Erasmus University Rotterdam."
-  },
-  {
     "objectID": "cv.html",
     "href": "cv.html",
     "title": "Curriculum Vitae",
@@ -40,5 +19,75 @@
     "title": "Curriculum Vitae",
     "section": "WORK EXPERIENCE",
     "text": "WORK EXPERIENCE\nPredoctoral Research Assistant Public Economics  London School of Economics Jan 2020 – June 2021\nResearch Assistant in the Education, Labor and Pensions Sector  CPB Netherlands Bureau for Economic Policy Analysis Sep 2019 – Mar 2020"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Ben Dahmen",
+    "section": "",
+    "text": "I am a third-year Economics PhD Student at LSE, who is interested in Public and Labor Economics. I hold an MSc in Economics from LSE and a BSc in Economics and Business from Erasmus University Rotterdam."
+  },
+  {
+    "objectID": "research/internships/index.html",
+    "href": "research/internships/index.html",
+    "title": "Inequality in Internships",
+    "section": "",
+    "text": "Internships may play an important role in shaping labor market inequality. Using Dutch admin data, we show that the richest university students are 39% more likely to do an internship than the poorest students. We explore what creates this difference and what consequences it has on students’ careers. Ability does not explain the difference, but the opportunity costs of doing an internship could be important. After graduation, internships are linked to significantly higher earnings and contribute to intergenerational immobility. In the future, we plan to find a causal strategy to estimate internship returns, and analyse how personal networks help students find internships."
+  },
+  {
+    "objectID": "research/internships/index.html#abstract",
+    "href": "research/internships/index.html#abstract",
+    "title": "Inequality in Internships",
+    "section": "",
+    "text": "Internships may play an important role in shaping labor market inequality. Using Dutch admin data, we show that the richest university students are 39% more likely to do an internship than the poorest students. We explore what creates this difference and what consequences it has on students’ careers. Ability does not explain the difference, but the opportunity costs of doing an internship could be important. After graduation, internships are linked to significantly higher earnings and contribute to intergenerational immobility. In the future, we plan to find a causal strategy to estimate internship returns, and analyse how personal networks help students find internships."
+  },
+  {
+    "objectID": "research/internships/index.html#figures",
+    "href": "research/internships/index.html#figures",
+    "title": "Inequality in Internships",
+    "section": "Figures",
+    "text": "Figures\n\n\n\nRich students do more internships than poor students"
+  },
+  {
+    "objectID": "research/student_employment/index.html",
+    "href": "research/student_employment/index.html",
+    "title": "Student Employment in England after the Maintenance Grant Removal",
+    "section": "",
+    "text": "In 2016 the UK removed a living cost grant for university students. Motivated by a large increase in student employment after the grant was removed, I estimate whether the loss in income pushed students to work during university. I use two Difference-in-Differences designs, the first compares students to the regular labor market, and the second splits students by grant eligibility. Although student employment increased compared to the regular labor market, the increase is common to eligible and ineligible students. My results suggest that the maintenance grant removal did not cause the increase in student employment."
+  },
+  {
+    "objectID": "research/student_employment/index.html#abstract",
+    "href": "research/student_employment/index.html#abstract",
+    "title": "Student Employment in England after the Maintenance Grant Removal",
+    "section": "",
+    "text": "In 2016 the UK removed a living cost grant for university students. Motivated by a large increase in student employment after the grant was removed, I estimate whether the loss in income pushed students to work during university. I use two Difference-in-Differences designs, the first compares students to the regular labor market, and the second splits students by grant eligibility. Although student employment increased compared to the regular labor market, the increase is common to eligible and ineligible students. My results suggest that the maintenance grant removal did not cause the increase in student employment."
+  },
+  {
+    "objectID": "research/student_employment/index.html#figures",
+    "href": "research/student_employment/index.html#figures",
+    "title": "Student Employment in England after the Maintenance Grant Removal",
+    "section": "Figures",
+    "text": "Figures\n\n\n\nStudent employment increased after the grant was removed"
+  },
+  {
+    "objectID": "research/index.html",
+    "href": "research/index.html",
+    "title": "Research",
+    "section": "",
+    "text": "Inequality in Internships\n\n\nUnderstanding the unequal access to internships for university students in the Netherlands\n\n\n\n\n\n\n\n\nJune 2025\n\n\nOmry Yoresh, Ben Dahmen\n\n\n\n\n\n\n\n\n\n\n\n\nStudent Employment in England after the Maintenance Grant Removal\n\n\n\n\n\n\n\n\n\n\n\nJune 2024\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "research_old.html",
+    "href": "research_old.html",
+    "title": "Research",
+    "section": "",
+    "text": "Student Employment in England after the Maintenance Grant Removal  PDF\n\n\nIn 2016 the UK removed a living cost grant for university students. Motivated by a large increase in student employment after the grant was removed, I estimate whether the loss in income pushed students to work during university. I use two Difference-in-Differences designs, the first compares students to the regular labor market, and the second splits students by grant eligibility. Although student employment increased compared to the regular labor market, the increase is common to eligible and ineligible students. My results suggest that the maintenance grant removal did not cause the increase in student employment.\n\n\n\n\n\n\n\n\n\n Inequality in Internships  Slides\n\n\nInternships may play an important role in shaping labour market inequality. Using Dutch admin data, we show that the richest university students are 39% more likely to do an internship than the poorest students. We explore what creates this difference and what consequences it has on students’ careers. Ability does not explain the difference, but the opportunity costs of doing an internship could be important. After graduation, internships are linked to significantly higher earnings and contribute to intergenerational immobility. In the future, we plan to find a causal strategy to estimate internship returns, and analyse how personal networks help students find internships."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "I am an Economics PhD Student at LSE, interested in Public and Labor Economics."
   }
 ]
