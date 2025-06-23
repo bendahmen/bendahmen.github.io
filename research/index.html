@@ -41,7 +41,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-45aa3b53502eb537c8212b3f9b1e2957.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-6d024bc60d417664e2cc021dc14e2ba2.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -79,9 +79,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-subtitle','listing-image','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-project','listing-website','listing-format','listing-editor','listing-language','listing-date-format','listing-title-block-banner','listing-toc','listing-toc-title','listing-toc-location','listing-execute','listing-include-back-link','listing-title','listing-subtitle','listing-date','listing-description','listing-plot','listing-author','listing-pub-info','listing-path','listing-outputHref','listing-date-modified','listing-filename','listing-file-modified','listing-reading-time','listing-word-count',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-date-modified-sort'] },{ data: ['listing-file-modified-sort'] },{ data: ['listing-reading-time-sort'] },{ data: ['listing-word-count-sort'] }],
       
-      searchColumns: ["listing-date","listing-title","listing-author","listing-subtitle","listing-image","listing-description"],
+      searchColumns: ["listing-project","listing-website","listing-format","listing-editor","listing-language","listing-date-format","listing-title-block-banner","listing-toc","listing-toc-title","listing-toc-location","listing-execute","listing-include-back-link","listing-title","listing-subtitle","listing-date","listing-description","listing-plot","listing-author","listing-pub-info","listing-path","listing-outputHref","listing-date-modified","listing-filename","listing-file-modified","listing-reading-time","listing-word-count"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -203,61 +203,96 @@ window.Quarto = {
 
 
 
-<div id="listing-papers" class="quarto-listing quarto-listing-container-default">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-listing-date-sort="1750204800000" data-listing-file-modified-sort="1750411911327" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="110">
-<div class="thumbnail"><a href="../research/internships/index.html" class="no-external">
-
-<p class="card-img-top"><img src="../img/internships.png"  class="thumbnail-image card-img"/></p>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../research/internships/index.html" class="no-external">Inequality in Internships</a>
-</h3>
-<div class="listing-subtitle">
-<a href="../research/internships/index.html" class="no-external">Understanding the unequal access to internships for university students in the Netherlands</a>
-</div>
-<div class="delink listing-description"><a href="../research/internships/index.html" class="no-external">
-Internships may play an important role in shaping labor market inequality. Using Dutch admin data, we show that the richest university students are 39% more likely to do an…
-</a></div>
-</div>
-<div class="metadata">
-<a href="../research/internships/index.html" class="no-external">
-<div class="listing-date">
-June 2025
-</div>
-<div class="listing-author">
-Omry Yoresh, Ben Dahmen
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-listing-date-sort="1717200000000" data-listing-file-modified-sort="1750411911327" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="103">
-<div class="thumbnail"><a href="../research/student_employment/index.html" class="no-external">
-
-<p class="card-img-top"><img src="../img/employment_ts.png"  class="thumbnail-image card-img"/></p>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../research/student_employment/index.html" class="no-external">Student Employment in England after the Maintenance Grant Removal</a>
-</h3>
-<div class="listing-subtitle">
-<a href="../research/student_employment/index.html" class="no-external"></a>
-</div>
-<div class="delink listing-description"><a href="../research/student_employment/index.html" class="no-external">
-In 2016 the UK removed a living cost grant for university students. Motivated by a large increase in student employment after the grant was removed, I estimate whether the…
-</a></div>
-</div>
-<div class="metadata">
-<a href="../research/student_employment/index.html" class="no-external">
-<div class="listing-date">
-June 2024
-</div>
-</a>
-</div>
-</div>
+<div id="listing-papers" class="quarto-listing quarto-listing-container-custom">
+<div class="research project-list">
+  <ul class="list">
+    
+      <li class="project" data-index="0" data-listing-date-sort="1750204800000" data-listing-file-modified-sort="1750675532993" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="110">
+        <div class="project-content">
+          <div class="project-info">
+            <p class="project-title">
+              <a href="../research/internships/index.html">
+                Inequality in Internships
+              </a>
+            </p>
+            
+              <div class="authors">
+                <p>
+                  with 
+                  
+                    Omry Yoresh
+                  
+                </p>
+              </div>
+            
+            
+              <div class="project-description">
+                <p>Rich university students in NL are 39% more likely to do an internship than poor students. In this paper we explore whether networks and opportunity costs contribute to this inequality, and how it affects income inequality later in life.</p>
+              </div>
+            
+            <div class="project-details-listing">
+              <ul class="project-links">
+                
+                  
+                    <li class="project-link">
+                      
+                        <a href="../../papers/internships.pdf">
+                      
+                          <i class="bi bi-easel"></i> Slides
+                        </a>
+                    </li>
+                  
+                
+              </ul>
+            </div>
+          </div>
+          
+            <div class="project-plot">
+              <img src="../../img/internships.png" alt="Inequality in Internships plot">
+            </div>
+          
+        </div>
+      </li>
+    
+      <li class="project" data-index="1" data-listing-date-sort="1717200000000" data-listing-file-modified-sort="1750675532993" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="103">
+        <div class="project-content">
+          <div class="project-info">
+            <p class="project-title">
+              <a href="../research/student_employment/index.html">
+                Student Employment in England after the Maintenance Grant Removal
+              </a>
+            </p>
+            
+            
+              <div class="project-description">
+                <p>Student employment increased after the UK removed the means-tested maintenance grant. In my paper I analyse whether the grant removal caused an increase in employment by comparing eligible and ineligible students.</p>
+              </div>
+            
+            <div class="project-details-listing">
+              <ul class="project-links">
+                
+                  
+                    <li class="project-link">
+                      
+                        <a href="../../papers/maintenance_grant.pdf">
+                      
+                          <i class="bi bi-file-earmark-pdf"></i> PDF
+                        </a>
+                    </li>
+                  
+                
+              </ul>
+            </div>
+          </div>
+          
+            <div class="project-plot">
+              <img src="../../img/employment_ts.png" alt="Student Employment in England after the Maintenance Grant Removal plot">
+            </div>
+          
+        </div>
+      </li>
+    
+  </ul>
 </div>
 <div class="listing-no-matching d-none">No matching items</div>
 </div>
