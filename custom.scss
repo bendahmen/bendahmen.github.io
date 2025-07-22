@@ -19,14 +19,41 @@ $font-family-smallcaps: 'Playfair Display SC', serif;
 //$light-font-color: #FFFFFF;
 
 // LSE Color Scheme
-$main-color: #8B1538;           // LSE Burgundy - for titles and accents
-$background-color: #FDF7F8;     // Very light pink-tinted background
-$main-color-light: #F4E6E9;     // Light burgundy for cards and info boxes
-$accent-color: #1B365D;         // Deep navy blue (LSE secondary color)
-$secondary-accent-color: #B8860B; // Dark gold for highlights
-$font-color: #1B365D;           // Navy for primary text
-$secondary-font-color: #666666;  // Medium gray (unchanged)
-$light-font-color: #FFFFFF;     // White (unchanged)
+//$main-color: #8B1538;           // LSE Burgundy - for titles and accents
+//$background-color: #FDF7F8;     // Very light pink-tinted background
+//$main-color-light: #F4E6E9;     // Light burgundy for cards and info boxes
+//$accent-color: #1B365D;         // Deep navy blue (LSE secondary color)
+//$secondary-accent-color: #B8860B; // Dark gold for highlights
+//$font-color: #1B365D;           // Navy for primary text
+//$secondary-font-color: #666666;  // Medium gray (unchanged)
+//$light-font-color: #FFFFFF;     // White (unchanged)
+
+// Shirt Color Scheme
+$primary-color: #0D3D8E;
+$primary-color-2: #154BA6;
+$primary-color-3: #4D75BA;
+$primary-color-4: #98B2DF;
+$primary-color-5: #C6D1E4;
+$secondary-color: #D6AD00;
+$secondary-color-2: #FBCC09;
+$secondary-color-3: #FFDF5A;
+$secondary-color-4: #FFEEA5;
+$secondary-color-5: #FFF8DA;
+$tertiary-color: #D65900;
+$tertiary-color-2: #FB6D09;
+$tertiary-color-3: #FF9E5A;
+$tertiary-color-4: #FFCAA5;
+$tertiary-color-5: #FFE9DA;
+//
+$main-color: $tertiary-color;
+$background-color: $primary-color-5;
+$main-color-light: $secondary-color-5;
+$accent-color: $secondary-color;
+$secondary-accent-color: $tertiary-color;
+$font-color: $primary-color;
+$secondary-font-color: $secondary-color;
+$light-font-color: $primary-color-4;
+
 
 $link-color: $main-color;
 $body-bg: $background-color;
