@@ -1,5 +1,40 @@
 [
   {
+    "objectID": "research/internships/index.html",
+    "href": "research/internships/index.html",
+    "title": "Inequality in Internships",
+    "section": "",
+    "text": "Internships may play an important role in shaping labor market inequality. Using Dutch admin data, we show that the richest university students are 39% more likely to do an internship than the poorest students. We explore what creates this difference and what consequences it has on students’ careers. Ability does not explain the difference, but the opportunity costs of doing an internship could be important. After graduation, internships are linked to significantly higher earnings and contribute to intergenerational immobility. In the future, we plan to find a causal strategy to estimate internship returns, and analyse how personal networks help students find internships."
+  },
+  {
+    "objectID": "research/internships/index.html#abstract",
+    "href": "research/internships/index.html#abstract",
+    "title": "Inequality in Internships",
+    "section": "",
+    "text": "Internships may play an important role in shaping labor market inequality. Using Dutch admin data, we show that the richest university students are 39% more likely to do an internship than the poorest students. We explore what creates this difference and what consequences it has on students’ careers. Ability does not explain the difference, but the opportunity costs of doing an internship could be important. After graduation, internships are linked to significantly higher earnings and contribute to intergenerational immobility. In the future, we plan to find a causal strategy to estimate internship returns, and analyse how personal networks help students find internships."
+  },
+  {
+    "objectID": "research/internships/index.html#figures",
+    "href": "research/internships/index.html#figures",
+    "title": "Inequality in Internships",
+    "section": "Figures",
+    "text": "Figures\n\n\n\nRich students do more internships than poor students"
+  },
+  {
+    "objectID": "research/index.html",
+    "href": "research/index.html",
+    "title": "Research",
+    "section": "",
+    "text": "Inequality in Internships\n              \n            \n            \n              \n                \n                  with \n                  \n                    Omry Yoresh\n                  \n                \n              \n            \n            \n              \n                Rich university students in NL are 39% more likely to do an internship than poor students. In this paper we explore whether networks and opportunity costs contribute to this inequality, and how it affects income inequality later in life.\n              \n            \n            \n              \n                \n                  \n                    \n                      \n                        \n                      \n                           Slides\n                        \n                    \n                  \n                \n              \n            \n          \n          \n            \n              \n            \n          \n        \n      \n    \n      \n        \n          \n            \n              \n                Student Employment in England after the Maintenance Grant Removal\n              \n            \n            \n            \n              \n                Student employment increased after the UK removed the means-tested maintenance grant. In my paper I analyse whether the grant removal caused an increase in employment by comparing eligible and ineligible students.\n              \n            \n            \n              \n                \n                  \n                    \n                      \n                        \n                      \n                           PDF\n                        \n                    \n                  \n                \n              \n            \n          \n          \n            \n              \n            \n          \n        \n      \n    \n  \n\nNo matching items"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "I am an Economics PhD Student at LSE, interested in Public and Labor Economics."
+  },
+  {
     "objectID": "cv.html",
     "href": "cv.html",
     "title": "Curriculum Vitae",
@@ -25,7 +60,7 @@
     "href": "cv.html#teaching",
     "title": "Curriculum Vitae",
     "section": "TEACHING",
-    "text": "TEACHING\nLondon School of Economics  EC1A3 2023/24  EC2B3 2023/24 – 2024/25  PP410 2024/25\n\nAwards\nLondon School of Economics  LSE Class Teacher Award (Highly Commended) 2024/25  LSE Teaching Bonus Award 2023/23"
+    "text": "TEACHING\nLondon School of Economics  EC1A3 2023/24  EC2B3 2023/24 – 2024/25  PP410 2024/25 – 2025/26\n\nAwards\nLondon School of Economics  Excellence in Education Award 2024/25  LSE Class Teacher Award (Highly Commended) 2024/25  LSE Teaching Bonus Award 2023/24"
   },
   {
     "objectID": "index.html",
@@ -33,13 +68,6 @@
     "title": "Ben Dahmen",
     "section": "",
     "text": "Hi there, I’m Ben!\nWhenever I’m not procrastinating by watching YouTube tutorials on how to make your own website, I am a PhD student at the LSE Econ Department. Check out my research or my CV, and feel free to get in touch via email while I’m still in that phase of my career where receiving an email is the highlight of my week."
-  },
-  {
-    "objectID": "research/index.html",
-    "href": "research/index.html",
-    "title": "Research",
-    "section": "",
-    "text": "Inequality in Internships\n              \n            \n            \n              \n                \n                  with \n                  \n                    Omry Yoresh\n                  \n                \n              \n            \n            \n              \n                Rich university students in NL are 39% more likely to do an internship than poor students. In this paper we explore whether networks and opportunity costs contribute to this inequality, and how it affects income inequality later in life.\n              \n            \n            \n              \n                \n                  \n                    \n                      \n                        \n                      \n                           Slides\n                        \n                    \n                  \n                \n              \n            \n          \n          \n            \n              \n            \n          \n        \n      \n    \n      \n        \n          \n            \n              \n                Student Employment in England after the Maintenance Grant Removal\n              \n            \n            \n            \n              \n                Student employment increased after the UK removed the means-tested maintenance grant. In my paper I analyse whether the grant removal caused an increase in employment by comparing eligible and ineligible students.\n              \n            \n            \n              \n                \n                  \n                    \n                      \n                        \n                      \n                           PDF\n                        \n                    \n                  \n                \n              \n            \n          \n          \n            \n              \n            \n          \n        \n      \n    \n  \n\nNo matching items"
   },
   {
     "objectID": "research/student_employment/index.html",
@@ -61,33 +89,5 @@
     "title": "Student Employment in England after the Maintenance Grant Removal",
     "section": "Figures",
     "text": "Figures\n\n\n\nStudent employment increased after the grant was removed"
-  },
-  {
-    "objectID": "research/internships/index.html",
-    "href": "research/internships/index.html",
-    "title": "Inequality in Internships",
-    "section": "",
-    "text": "Internships may play an important role in shaping labor market inequality. Using Dutch admin data, we show that the richest university students are 39% more likely to do an internship than the poorest students. We explore what creates this difference and what consequences it has on students’ careers. Ability does not explain the difference, but the opportunity costs of doing an internship could be important. After graduation, internships are linked to significantly higher earnings and contribute to intergenerational immobility. In the future, we plan to find a causal strategy to estimate internship returns, and analyse how personal networks help students find internships."
-  },
-  {
-    "objectID": "research/internships/index.html#abstract",
-    "href": "research/internships/index.html#abstract",
-    "title": "Inequality in Internships",
-    "section": "",
-    "text": "Internships may play an important role in shaping labor market inequality. Using Dutch admin data, we show that the richest university students are 39% more likely to do an internship than the poorest students. We explore what creates this difference and what consequences it has on students’ careers. Ability does not explain the difference, but the opportunity costs of doing an internship could be important. After graduation, internships are linked to significantly higher earnings and contribute to intergenerational immobility. In the future, we plan to find a causal strategy to estimate internship returns, and analyse how personal networks help students find internships."
-  },
-  {
-    "objectID": "research/internships/index.html#figures",
-    "href": "research/internships/index.html#figures",
-    "title": "Inequality in Internships",
-    "section": "Figures",
-    "text": "Figures\n\n\n\nRich students do more internships than poor students"
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "I am an Economics PhD Student at LSE, interested in Public and Labor Economics."
   }
 ]
