@@ -44,7 +44,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-b575e7ef61b717b72fc147dd02de3bde.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-5acad0ceb14e3f9af1d56582530f9aba.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -207,7 +207,11 @@ cookieconsent.run({
    
   <ul>
   <li><a href="#abstract" id="toc-abstract" class="nav-link active" data-scroll-target="#abstract">Abstract</a></li>
-  <li><a href="#figures" id="toc-figures" class="nav-link" data-scroll-target="#figures">Figures</a></li>
+  <li><a href="#minute-summary" id="toc-minute-summary" class="nav-link" data-scroll-target="#minute-summary">4-Minute Summary</a>
+  <ul class="collapse">
+  <li><a href="#why-do-rich-students-do-more-internships" id="toc-why-do-rich-students-do-more-internships" class="nav-link" data-scroll-target="#why-do-rich-students-do-more-internships">Why do rich students do more internships?</a></li>
+  <li><a href="#does-it-matter" id="toc-does-it-matter" class="nav-link" data-scroll-target="#does-it-matter">Does it matter?</a></li>
+  </ul></li>
   </ul>
 </nav>
 </nav>
@@ -223,18 +227,98 @@ cookieconsent.run({
 
 <section id="abstract" class="level2">
 <h2 class="anchored" data-anchor-id="abstract">Abstract</h2>
-<p>Internships may play an important role in shaping labor market inequality. Using Dutch admin data, we show that the richest university students are 39% more likely to do an internship than the poorest students. We explore what creates this difference and what consequences it has on students’ careers. Ability does not explain the difference, but the opportunity costs of doing an internship could be important. After graduation, internships are linked to significantly higher earnings and contribute to intergenerational immobility. In the future, we plan to find a causal strategy to estimate internship returns, and analyse how personal networks help students find internships.</p>
+<p>Internships may play an important role in shaping labor market inequality. Using Dutch admin data, we show that the richest university students are 39% more likely to do an internship than the poorest students. We explore what creates this difference and what consequences it has on students’ careers. Ability does not explain the difference, but the opportunity costs of doing an internship could be important. After graduation, internships are linked to significantly higher earnings and contribute to inter-generational immobility. In the future, we plan to find a causal strategy to estimate internship returns, and analyse how personal networks help students find internships.</p>
 </section>
-<section id="figures" class="level2">
-<h2 class="anchored" data-anchor-id="figures">Figures</h2>
+<section id="minute-summary" class="level2">
+<h2 class="anchored" data-anchor-id="minute-summary">4-Minute Summary</h2>
+<p>Student internships in the Netherlands are mainly done by rich students. Controlling for the field of education, the top five percent of students are 40% more likely to do an internship than the bottom five percent. In our research we try to answer why this is the case, and whether it matters for labor market outcomes.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="../../img/internships.png" class="img-fluid figure-img"></p>
 <figcaption>Rich students do more internships than poor students</figcaption>
 </figure>
 </div>
+<section id="why-do-rich-students-do-more-internships" class="level3">
+<h3 class="anchored" data-anchor-id="why-do-rich-students-do-more-internships">Why do rich students do more internships?</h3>
+<p>There are different explanations why rich students may be doing more internships than poor students. The simplest explanation would be ability. Maybe richer students are, on average, more able than poor students, and companies are rightfully hiring the best candidates for their internships. We test this explanation by controlling for students’ high-school exam scores but find that the inequality between rich and poor is unaffected. High-school exam scores are, of course, not a perfect measure of ability, but the result suggests that ability is not the main explanation for the inequality between rich and poor students.</p>
+<div class="cell">
+<div class="cell-output-display">
+<!-- Outcome label -->
+<p><small><strong>Outcome:</strong> Doing an internship</small></p>
+
+<!-- Table -->
+
+<table class="table table-striped caption-top table-sm small" data-quarto-postprocess="true">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">No Controls</th>
+<th data-quarto-table-cell-role="th">+ Exam Score</th>
+<th data-quarto-table-cell-role="th">+ Education Field</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>HH Income Ventile Parents</td>
+<td>0.00168***<br>
+<span class="small">(0.00009)</span></td>
+<td>0.00178***<br>
+<span class="small">(0.00009)</span></td>
+<td>0.00184***<br>
+<span class="small">(0.00009)</span></td>
+</tr>
+<tr class="even">
+<td>Standardised Exam Score</td>
+<td></td>
+<td>-0.0057***<br>
+<span class="small">(0.00044)</span></td>
+<td>-0.0037***<br>
+<span class="small">(0.00044)</span></td>
+</tr>
+<tr class="odd">
+<td>Bachelor/Master FE</td>
+<td>✓</td>
+<td>✓</td>
+<td>✓</td>
+</tr>
+<tr class="even">
+<td>Observations</td>
+<td>602,267</td>
+<td>602,267</td>
+<td>602,267</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>Instead, personal connections could be an explanation. What if the most important ingredient to finding an internship is personal connections, and rich students simply have more valuable connections than poor students? We plan to test this explanation by using data on a person’s relationships, for example family relationships, colleagues, or neighbors. An interesting test would be whether conditional on having a relationship with someone who works in a certain industry, a rich and a poor student are equally likely to intern in that industry.</p>
+<p>A third explanation for the inequality between rich and poor students could be opportunity costs. Internships bear opportunity costs because they pay less than the minimum wage, and regular student jobs paying at least the minimum wage are common. Moreover, to be eligible for internships, students often need to extend their enrollment and pay additional tuition fees.</p>
+<div class="columns">
+<div class="column">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../img/relevant_jobs_vs_income.PNG" class="img-fluid figure-img" alt="Relevant Jobs"></p>
+<figcaption>Rich students work to gain experience, poor students work to survive</figcaption>
+</figure>
+</div>
+</div><div class="column">
+<p><img src="../../img/survival_job_vs_income.PNG" class="img-fluid" data-fig-width="100%" alt="Survival Jobs"></p>
+</div>
+</div>
+<p>The data confirms that opportunity costs are relevant. While rich students work more hours in internships, poor students work more hours in regular jobs. To dig deeper we split regular jobs into two categories: career jobs that are related to your field of study, and survival jobs such as waiting in a restaurant. Rich students are more likely to work in a career job, and poor students are more likely to work in a survival job.</p>
+</section>
+<section id="does-it-matter" class="level3">
+<h3 class="anchored" data-anchor-id="does-it-matter">Does it matter?</h3>
+<p>Whether the internship inequality really matters, depends on how high the returns to doing an internship are. Internships are associated with more than 50% higher wages three years after graduation, and still more than 20% higher wages seven years after graduation, when controlling for observables related to education. Of course, this is only a correlation, but it suggests that internships have either large wage returns or are done by those people who do well in the labor market for other reasons too. Moreover, in a simple exercise we calculate the inequality in a student’s own wages seven years after graduation and see that doing an internship accounts for more than ten percent of that inequality.</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
