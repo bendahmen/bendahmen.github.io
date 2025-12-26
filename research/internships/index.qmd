@@ -27,41 +27,39 @@ In our paper, we investigate what creates the differences in who does internship
 
 ## 5-Minute Summary
 
-Rich students in the Netherlands do more internships than poor students. A student with parents in the top income percentile is 38% more likely to do an internship during their university degree, than a student from the poorest percentile. Our paper tries to explain why the internship gradient exists and how it affects intergenerational income inequality. 
+Rich students in the Netherlands do more internships than poor students. A student with parents in the top income percentile is 38% more likely to do an internship during their university degree, than a student from the poorest percentile. Our paper tries to explain why the internship gradient exists and how it affects intergenerational income inequality.
 
-![Figure 1](../../img/internships/internship_gradient.png) 
+![Figure 1](../../img/internships/internship_gradient.png)
 
-### Why do rich students do more internships? 
+### Why do rich students do more internships?
 
-There are several possible reasons. It could be about selection into universities and subjects. It could be that rich students have better connections. It could be about the opportunity costs of doing a badly paid internship. Or, it could be that richer students are simply more intelligent. We will cover each of these reasons and try to quantify how much of the internship gradient they can explain. 
+There are several possible reasons. It could be about selection into universities and subjects. It could be that rich students have better connections. It could be about the opportunity costs of doing a badly paid internship. Or, it could be that richer students are simply more intelligent. We will cover each of these reasons and try to quantify how much of the internship gradient they can explain.
 
 #### Selection
 
-![Figure 2](../../img/internships/internship_residualisation_selection.png) 
+![Figure 2](../../img/internships/internship_residualisation_selection.png)
 
-How important is selection? Some of the internship gradient could be explained by which subjects, universities, and programmes rich versus poor students select into. We quantify the role of selection by showing how much the gradient flattens after we control for a certain measure of selection (Figure 2). Compared to the blue original gradient, controlling for the specific university program flattens the gradient by 23%. In other words, 23% of the inequality in who does internships is related to the specific program a student enrols in. This result could reflect different things. It may reflect that richer students simply chose subjects in which internships are more common. But it may also reflect other differences, such as information on which programs offer the best career support. For example, richer students may attend better high schools that provide career-oriented guidance on which university programs to apply to. 
+How important is selection? Some of the internship gradient could be explained by which subjects, universities, and programmes rich versus poor students select into. We quantify the role of selection by showing how much the gradient flattens after we control for a certain measure of selection (Figure 2). Compared to the blue original gradient, controlling for the specific university program flattens the gradient by 23%. In other words, 23% of the inequality in who does internships is related to the specific program a student enrols in. This result could reflect different things. It may reflect that richer students simply chose subjects in which internships are more common. But it may also reflect other differences, such as information on which programs offer the best career support. For example, richer students may attend better high schools that provide career-oriented guidance on which university programs to apply to.
 
-#### Connections 
+#### Connections
 
-Anecdotally, getting an internship is often about connections. In our paper, we estimate the causal effect of having a family connection by comparing siblings. We define connections by looking at the industries that a student's family members work in. For each field of study we identify which industries students typically do internships in. A student has a connection if any of their family members work in one of the typical industries. Then we identify all sibling pairs among the students. If the pair does not study in the same field or at the same time, it’s likely that one sibling will have a connection while the other one does not. 
+Anecdotally, getting an internship is often about connections. In our paper, we estimate the causal effect of having a family connection by comparing siblings. We define connections by looking at the industries that a student's family members work in. For each field of study we identify which industries students typically do internships in. A student has a connection if any of their family members work in one of the typical industries. Then we identify all sibling pairs among the students. If the pair does not study in the same field or at the same time, it’s likely that one sibling will have a connection while the other one does not.
 
-We identify the causal effect of having a connection with the following regression: $\text{Internship}_i = \alpha + \beta \text{Connection}_i + \gamma_f \text{Family}_f  + \lambda_{su} \text{Study Field}_s \times \text{University}_u + \theta_y \text{Year}_y + \epsilon_i$ 
-where $\beta$ estimates how much more likely a student with a connection is to get an internship, relative to their sibling and relative to other students who study in the same field at the same university. 
+We identify the causal effect of having a connection with the following regression: $\text{Internship}_i = \alpha + \beta \text{Connection}_i + \gamma_f \text{Family}_f  + \lambda_{su} \text{Study Field}_s \times \text{University}_u + \theta_y \text{Year}_y + \epsilon_i$ where $\beta$ estimates how much more likely a student with a connection is to get an internship, relative to their sibling and relative to other students who study in the same field at the same university.
 
-We find no effect for Bachelor’s students but a significant effect of 1.1 percentage points for Master’s students, which corresponds to a five percent increase in the likelihood of doing an internship. The effect is small, but the importance of connections varies a lot between fields of study. In Figure 3, we therefore show heterogeneous treatment effects for each field of study. In many fields connection do not help, but in many others they do and we find that having a connection can raise the likelihood of doing an internship by 10-15%. 
+We find no effect for Bachelor’s students but a significant effect of 1.1 percentage points for Master’s students, which corresponds to a five percent increase in the likelihood of doing an internship. The effect is small, but the importance of connections varies a lot between fields of study. In Figure 3, we therefore show heterogeneous treatment effects for each field of study. In many fields connection do not help, but in many others they do and we find that having a connection can raise the likelihood of doing an internship by 10-15%.
 
-![Figure 3](../../img/internships/connections_te_het.png) 
+![Figure 3](../../img/internships/connections_te_het.png)
 
-To quantify how much connections affect the internship gradient, we construct a counterfactual. In the counterfactual we simulate internship rates if every student would have a connection. For this we identify all students who currently do not have a connection and add their relevant treatment effect to the internship variable. Based on this data we calculate a new gradient that considers these students’ additional likelihood of doing an internship. Figure 4 shows the original and counterfactual gradient. We conclude that family connections can explain 9% of the total inequality in who does an internship. 
+To quantify how much connections affect the internship gradient, we construct a counterfactual. In the counterfactual we simulate internship rates if every student would have a connection. For this we identify all students who currently do not have a connection and add their relevant treatment effect to the internship variable. Based on this data we calculate a new gradient that considers these students’ additional likelihood of doing an internship. Figure 4 shows the original and counterfactual gradient. We conclude that family connections can explain 9% of the total inequality in who does an internship.
 
-![Figure 4](../../img/internships/counterfactual_res_fs_new.png) 
+![Figure 4](../../img/internships/counterfactual_res_fs_new.png)
 
-#### Opportunity Costs 
+#### Opportunity Costs
 
-Many Dutch students work in student jobs. We argue that such jobs present an opportunity cost for internships because they pay the minimum wage. Opportunity costs could contribute to the internship inequality if they matter more to poor students, for example because liquidity constraints prevent poor students from doing an internship instead of their student job. Figure 5 shows that the gradient for student jobs is indeed much flatter than the gradient for internships. To dig deeper into what student jobs are, we categorise them as relevant (related to your field of study) and survival (retail, gastronomy, etc.) jobs (Figure 6). Also here we see a similar difference, rich students are a bit more likely to work in relevant jobs while poor students are much more likely to work in survival jobs. 
+Many Dutch students work in student jobs. We argue that such jobs present an opportunity cost for internships because they pay the minimum wage. Opportunity costs could contribute to the internship inequality if they matter more to poor students, for example because liquidity constraints prevent poor students from doing an internship instead of their student job. Figure 5 shows that the gradient for student jobs is indeed much flatter than the gradient for internships. To dig deeper into what student jobs are, we categorise them as relevant (related to your field of study) and survival (retail, gastronomy, etc.) jobs (Figure 6). Also here we see a similar difference, rich students are a bit more likely to work in relevant jobs while poor students are much more likely to work in survival jobs.
 
-::: {.columns}
-
+::::: columns
 ::: {.column width="50%"}
 ![Figure 5](../../img/internships/internships_vs_jobs_gradients_new.png){fig-alt="Relevant Jobs" fig-width="100%"}
 :::
@@ -69,12 +67,11 @@ Many Dutch students work in student jobs. We argue that such jobs present an opp
 ::: {.column width="50%"}
 ![Figure 6](../../img/internships/relevant_vs_survival_gradients.png){fig-alt="Survival Jobs" fig-width="100%"}
 :::
+:::::
 
-::: 
+Although the evidence in Figure 5 is only indicative, it does indicate that opportunity costs play a role in the inequality in internships. In the future we’d like to use a causal design to quantify how much opportunity costs contribute to the income gradient in internships.
 
-Although the evidence in Figure 5 is only indicative, it does indicate that opportunity costs play a role in the inequality in internships. In the future we’d like to use a causal design to quantify how much opportunity costs contribute to the income gradient in internships. 
-
-### Ability 
+### Ability
 
 The simplest explanation for why rich students do more internships could be that, on average, they are more intelligent. To test this hypothesis we would like to see how controlling for ability changes the internship gradient. Of course, we don’t observe ability. But we can proxy it using exam scores from the nationwide high school graduation exams in the Netherlands. Table 1 shows that controlling for exam scores doesn’t affect the gradient. In fact, exam scores do not predict who does internships at all.
 
@@ -88,4 +85,4 @@ Does it really matter that rich students do more internships than poor students?
 
 ## Outlook
 
-This paper is work in progress. In the short term we plan to quantify how much opportunity costs causally affect the gradient. In the long term we plan to estimate causal labor market returns to internships, and think about why firms offer internships. Do reach out if you have any questions, comments, or suggestions.
+This paper is work in progress. In the short term, we plan to quantify by how much opportunity costs affect the gradient. In the long term, we plan to estimate causal labor market returns to internships, and think about why firms offer internships. Do reach out if you have any questions, comments, or suggestions.
