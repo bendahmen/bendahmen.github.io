@@ -28,6 +28,14 @@ jobs:
         uses: r-lib/actions/setup-renv@v2
         with:
           cache-version: 1
+          
+      - name: Set pu Python
+        uses: actions/setup-pathon@v4
+        with:
+          python-version: '3.10'
+          
+      - name: Install WeasyPrint
+        run: pip install weasyprint
 
       - name: Render and Publish
         uses: quarto-dev/quarto-actions/publish@v2

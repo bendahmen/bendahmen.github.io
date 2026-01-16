@@ -21,10 +21,11 @@ b.a.dahmen\@lse.ac.uk
 ::: print-only
 -   Research Interests: Labor Economics, Public Economics
 :::
-- Supervisors: 
-  - Steve Pischke
-  - Alan Manning
-  - Johannes Spinnewijn
+
+-   Supervisors:
+    -   Steve Pischke
+    -   Alan Manning
+    -   Johannes Spinnewijn
 
 **MSc -- Economics** <br> *London School of Economics* [*Sep 2020 --- Jul 2021*]{.cvdate}
 
