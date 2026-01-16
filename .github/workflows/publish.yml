@@ -29,8 +29,8 @@ jobs:
         with:
           cache-version: 1
           
-      - name: Set pu Python
-        uses: actions/setup-pathon@v4
+      - name: Set up Python
+        uses: actions/setup-python@v4
         with:
           python-version: '3.10'
           
