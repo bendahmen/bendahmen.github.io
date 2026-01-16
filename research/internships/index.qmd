@@ -71,7 +71,7 @@ Many Dutch students work in student jobs. We argue that such jobs present an opp
 
 Although the evidence in Figure 5 is only indicative, it does indicate that opportunity costs play a role in the inequality in internships. In the future we’d like to use a causal design to quantify how much opportunity costs contribute to the income gradient in internships.
 
-### Ability
+#### Ability
 
 The simplest explanation for why rich students do more internships could be that, on average, they are more intelligent. To test this hypothesis we would like to see how controlling for ability changes the internship gradient. Of course, we don’t observe ability. But we can proxy it using exam scores from the nationwide high school graduation exams in the Netherlands. Table 1 shows that controlling for exam scores doesn’t affect the gradient. In fact, exam scores do not predict who does internships at all.
 
@@ -83,6 +83,10 @@ htmltools::includeHTML("table.html")
 
 Does it really matter that rich students do more internships than poor students? The literature suggests yes. Several papers estimated the causal returns to doing an internship and found that they increase wages between 5%-15% (Margaryan et al. 2022, Bolli et al. 2019), they increase chances of being invited to an interview by 15% (Baert et al. 2021, Nunley et al. 2016), and they increase the speed of being promoted (Weiss et al. 2014). Moreover, in the Dutch data we find that students who did internships have 20% higher wages seven years after graduation. Lastly we want to quantify how internships are related to income inequality in general. For this we estimate an intergenerational income gradient by regressing students’ income after graduation on their parents’ household income percentile, and test how much the gradient flattens when we control for internships. Table 2 shows that even in the long term, more than 10% of intergenerational income inequality is related to whether or not students do an internship.
 
-## Outlook
+```{r, echo=FALSE}
+htmltools::includeHTML("returns.html")
+```
+
+### Outlook
 
 This paper is work in progress. In the short term, we plan to quantify by how much opportunity costs affect the gradient. In the long term, we plan to estimate causal labor market returns to internships, and think about why firms offer internships. Do reach out if you have any questions, comments, or suggestions.

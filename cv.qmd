@@ -1,10 +1,11 @@
 ---
-title: "Curriculum Vitae"
+title: "CV"
 format:
   html:
     toc: true
   pdf:
     author: Ben Dahmen
+    pdf-engine: weasyprint
 css: css/cv.css
 format-links: [pdf]
 ---
@@ -18,14 +19,18 @@ b.a.dahmen\@lse.ac.uk
 **PhD -- Economics** <br> *London School of Economics* [*Sep 2022 --- Present*]{.cvdate}
 
 ::: print-only
--   Research Interests: Public Economics, Labor Economics
+-   Research Interests: Labor Economics, Public Economics
 :::
+- Supervisors: 
+  - Steve Pischke
+  - Alan Manning
+  - Johannes Spinnewijn
 
 **MSc -- Economics** <br> *London School of Economics* [*Sep 2020 --- Jul 2021*]{.cvdate}
 
 **BSc -- Economics & Business Economics** <br> *Erasmus University Rotterdam* [*Sep 2016 --- Jul 2019*]{.cvdate}
 
-## WORK EXPERIENCE {style="page-break-before: always"}
+## WORK EXPERIENCE
 
 **Predoctoral Research Assistant Public Economics** <br> *London School of Economics* [*Jan 2020 -- June 2021*]{.cvdate}
 
@@ -33,7 +38,7 @@ b.a.dahmen\@lse.ac.uk
 
 ## TEACHING
 
-**London School of Economics** <br> *EC1A3* [*2023/24*]{.cvdate} <br> *EC2B3* [*2023/24 -- 2024/25*]{.cvdate} <br> *PP410* [*2024/25 -- 2025/26*]{.cvdate}
+**London School of Economics** <br> *EC1A3 - Microeconomics I* [*2023/24*]{.cvdate} <br> *EC2B3 - Macroeconomics II* [*2023/24 -- 2026/26*]{.cvdate} <br> *PP410 - Public Economics for Public Policy* [*2024/25 -- 2025/26*]{.cvdate}
 
 ### Awards
 
