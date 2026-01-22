@@ -11,6 +11,7 @@ format-links: [pdf]
 ---
 
 ::: {.print-only .contact-block}
+bendahmen.github.io
 b.a.dahmen\@lse.ac.uk
 :::
 
@@ -33,7 +34,7 @@ b.a.dahmen\@lse.ac.uk
 
 ## WORK EXPERIENCE
 
-**Predoctoral Research Assistant Public Economics** <br> *London School of Economics* [*Jan 2020 -- June 2021*]{.cvdate}
+**Predoctoral Research Assistant Public Economics** <br> *London School of Economics* [*July 2021 -- June 2022*]{.cvdate}
 
 **Research Assistant in the Education, Labor and Pensions Sector** <br> *CPB Netherlands Bureau for Economic Policy Analysis* [*Sep 2019 -- Mar 2020*]{.cvdate}
 
