@@ -11,7 +11,7 @@ format-links: [pdf]
 ---
 
 ::: {.print-only .contact-block}
-bendahmen.github.io
+bendahmen.github.io -
 b.a.dahmen\@lse.ac.uk
 :::
 
