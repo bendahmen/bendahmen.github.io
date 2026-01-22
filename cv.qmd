@@ -11,13 +11,12 @@ format-links: [pdf]
 ---
 
 ::: {.print-only .contact-block}
-bendahmen.github.io -
-b.a.dahmen\@lse.ac.uk
+bendahmen.github.io - b.a.dahmen\@lse.ac.uk
 :::
 
 ## EDUCATION
 
-**PhD -- Economics** <br> *London School of Economics* [*Sep 2022 --- Present*]{.cvdate}
+**PhD -- Economics** <br> *London School of Economics* [*Sep 2022 --- Now*]{.cvdate}
 
 ::: print-only
 -   Research Interests: Labor Economics, Public Economics
@@ -34,7 +33,7 @@ b.a.dahmen\@lse.ac.uk
 
 ## WORK EXPERIENCE
 
-**Predoctoral Research Assistant Public Economics** <br> *London School of Economics* [*July 2021 -- June 2022*]{.cvdate}
+**Predoctoral Research Assistant Public Economics** <br> *London School of Economics* [*July 2021 -- Jun 2022*]{.cvdate}
 
 **Research Assistant in the Education, Labor and Pensions Sector** <br> *CPB Netherlands Bureau for Economic Policy Analysis* [*Sep 2019 -- Mar 2020*]{.cvdate}
 
@@ -45,3 +44,8 @@ b.a.dahmen\@lse.ac.uk
 ### Awards
 
 **London School of Economics** <br> *Excellence in Education Award* [*2024/25*]{.cvdate} <br> *LSE Class Teacher Award (Highly Commended)* [*2024/25*]{.cvdate} <br> *LSE Teaching Bonus Award* [*2023/24*]{.cvdate}
+
+## VOLUNTEER WORK
+**Maths Tutor** <br> *Team Up* [*Sep 2021 -- Jul 2022*]{.cvdate}
+
+**Mentor** <br> *Project Access* [*Sep 2022 -- Now*]{.cvdate}
