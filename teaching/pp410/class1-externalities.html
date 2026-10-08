@@ -1040,8 +1040,8 @@ opacity: 0.55; cursor: pointer; }
 </div>
 </div><div class="column" style="width:43%;">
 <p><br></p>
-<p><span style="color:#d7263d"><strong>Supply</strong></span>: ∀p, how much firms are willing to sell (or vice versa)</p>
-<p><span style="color:#2f7ed8"><strong>Demand</strong></span>: ∀p, how much consumers are willing to buy</p>
+<p><span style="color:#d7263d"><strong>Supply</strong></span>: at any price p, how much firms are willing to sell</p>
+<p><span style="color:#2f7ed8"><strong>Demand</strong></span>: at any price p, how much consumers are willing to buy</p>
 <p><br></p>
 <div id="w4-ctl">
 
@@ -1060,8 +1060,9 @@ opacity: 0.55; cursor: pointer; }
 </div>
 </div><div class="column" style="width:43%;">
 <p><br><br></p>
-<p><strong>CS</strong>: happiness (willingness to pay minus price)</p>
-<p><strong>PS</strong>: profit (kinda)</p>
+<div id="w5-ctl">
+
+</div>
 </div></div>
 </section>
 <section id="externalities-pollution" class="slide level2">
@@ -1081,28 +1082,6 @@ opacity: 0.55; cursor: pointer; }
 </div>
 </div></div>
 </section>
-<section id="how-to-fix-it" class="slide level2">
-<h2>How to fix it?</h2>
-<ul>
-<li><strong>Coasian bargaining</strong>: assign property rights, let people bargain
-<ul>
-<li><span class="pro">⊕ efficient outcome independent of who gets the property right</span></li>
-<li><span class="con">⊖ unrealistic with large externalities that affect many people</span></li>
-</ul></li>
-<li><strong>Regulate the price or quantity</strong>
-<ul>
-<li>Pigouvian tax: moves to the social optimum
-<ul>
-<li><span class="con">⊖ must know the value of MD</span></li>
-</ul></li>
-<li>Command quantity
-<ul>
-<li><span class="con">⊖ must know the efficient quantity</span></li>
-<li><span class="con">⊖ no incentive to innovate</span> <span class="pro">→ cap &amp; trade</span></li>
-</ul></li>
-</ul></li>
-</ul>
-</section>
 <section id="q1-a-firm-chooses-x-0" class="slide level2">
 <h2>Q1 (a): firm chooses x = 0</h2>
 <div class="columns">
@@ -1112,12 +1091,19 @@ opacity: 0.55; cursor: pointer; }
 </div>
 </div><div class="column" style="width:43%;">
 <p><br></p>
+<div id="w8-lines">
+
+</div>
+<br>
+<div id="w8-sol-ctl">
+
+</div>
+<div id="w8-solution" style="display:none">
 <ul>
-<li>PMB = 0 &lt; c′(x) for any x &gt; 0</li>
-<li>→ firm invests x = 0</li>
+<li>Firm invests x = 0</li>
 <li>Efficient: q*<sub>eff</sub> where SMB = SMC</li>
 </ul>
-<p><br></p>
+</div>
 <div id="w8-ctl">
 
 </div>
@@ -1204,7 +1190,7 @@ opacity: 0.55; cursor: pointer; }
 (() => {
 // ---- Shared parameters ----
 const col = {blue: "#2f7ed8", red: "#d7263d", orange: "#f39c12", green: "#4caf50", grey: "#7f8c8d",
-             gold: "#f5b041", purple: "#8e44ad", black: "#222", quantity: "#0072b2", price: "#d55e00"};
+             gold: "#f5b041", brown: "#a04000", purple: "#8e44ad", black: "#222", quantity: "#0072b2", price: "#d55e00"};
 
 // Running example for the equilibrium/externality slides: linear D and S crossing at (5, 5)
 const mkt = {D: q => 9 - 0.8 * q, S: q => 1 + 0.8 * q, qD: p => (9 - p) / 0.8, qS: p => (p - 1) / 0.8,
@@ -1360,6 +1346,15 @@ const Fig = (() => {
         dots.push(`<circle cx="${X(x)}" cy="${Y(y)}" r="${r}" fill="${color}" stroke="white" stroke-width="1.5"/>`);
         return fig;
       },
+      // stick figure standing on the x-axis at x, about 1 unit (48px) tall
+      person(x, {color = "#444"} = {}) {
+        const cx = X(x), y0 = Y(0) - 2;
+        lines.push(`<g stroke="${color}" stroke-width="3" stroke-linecap="round" fill="none">
+          <path d="M${cx - 8},${y0} L${cx},${y0 - 16} L${cx + 8},${y0} M${cx},${y0 - 16} L${cx},${y0 - 32}
+                   M${cx - 10},${y0 - 26} L${cx + 10},${y0 - 26}"/>
+          <circle cx="${cx}" cy="${y0 - 39}" r="7" fill="white"/></g>`);
+        return fig;
+      },
       text(x, y, s, {color = "#222", dx = 0, dy = 0, anchor = "start", size = 24, weight = 400} = {}) {
         labels.push(`<text x="${(X(x) + dx).toFixed(1)}" y="${(Y(y) + dy).toFixed(1)}" fill="${color}"
           font-size="${size}" font-weight="${weight}" text-anchor="${anchor}">${rich(s, size)}</text>`);
@@ -1426,24 +1421,47 @@ const Fig = (() => {
   });
 }
 
-// ---- p. 5: surpluses (static) ----
+// ---- p. 5: surpluses, with CS built up from individual buyers ----
 {
-  const f = Fig({w: 700, h: 590});
-  const {qstar: q, pstar: p} = mkt;
-  f.area([[0, p], [0, mkt.D(0)], [q, p]], {fill: col.gold, opacity: 0.55});
-  f.area([[0, p], [0, mkt.S(0)], [q, p]], {fill: col.gold, opacity: 0.3});
-  f.guide(q, p, {color: col.orange});
-  f.line(mkt.D, {color: col.blue, label: "D", dx: 8, dy: -4});
-  f.line(mkt.S, {to: 9.8, color: col.red, label: "S"});
-  f.text(q / 3, (2 * p + mkt.D(0)) / 3, "CS", {anchor: "middle", dy: 7, weight: 600});
-  f.text(q / 3, (2 * p + mkt.S(0)) / 3, "PS", {anchor: "middle", dy: 7, weight: 600});
-  f.ytick(p, "p^*", {color: col.orange}).xtick(q, "q^*", {color: col.orange});
-  $("w5-plot").replaceChildren(f.svg());
+  const show = check({label: "Show individual buyers"});
+  $("w5-ctl").append(show);
+  wire({show}, ({show}) => {
+    const f = Fig({w: 700, h: 590});
+    const {qstar: q, pstar: p} = mkt;
+    f.area([[0, p], [0, mkt.D(0)], [q, p]], {fill: col.gold, opacity: 0.55});
+    f.area([[0, p], [0, mkt.S(0)], [q, p]], {fill: col.gold, opacity: 0.3});
+    f.guide(q, p, {color: col.orange});
+    f.line(mkt.D, {color: col.blue, label: "D", dx: 8, dy: -4});
+    f.line(mkt.S, {to: 9.8, color: col.red, label: "S"});
+    f.text(q / 3, (2 * p + mkt.D(0)) / 3, "CS", {anchor: "middle", dy: 7, weight: 600});
+    f.text(q / 3, (2 * p + mkt.S(0)) / 3, "PS", {anchor: "middle", dy: 7, weight: 600});
+    f.ytick(p, "p^*", {color: col.orange}).xtick(q, "q^*", {color: col.orange});
+    if (show) {
+      // Buyers lined up along Q from highest to lowest WTP, so each one's WTP is the height of D
+      // at their position. Bar below p* = price paid, bar above p* = their CS.
+      f.text(0, 0, "buyers sorted by WTP →", {dx: 6, dy: 34, size: 19, color: "#555"});
+      for (const x of [1, 3, q]) {
+        const wtp = mkt.D(x), cs = wtp - p;
+        f.person(x);
+        f.seg(x, 1.05, x, p, {color: "#555", width: 2, dash: "3 5"});
+        if (cs > 0) f.seg(x, p, x, wtp, {color: col.brown, width: 7});
+        f.dot(x, wtp, {color: col.blue});
+        if (cs > 0) {
+          f.text(x, wtp, `CS = ${cs.toFixed(1)}`, {dx: 10, dy: -12, color: col.brown, weight: 600});
+        } else {
+          // marginal buyer: WTP = p*, sits in the wedge right of the crossing
+          f.text(x, wtp, "CS = 0", {dx: 40, dy: 8, color: col.brown, weight: 600});
+          f.text(x, 0, "marginal buyer", {dx: 16, dy: -10, size: 19, color: "#555"});
+        }
+      }
+    }
+    $("w5-plot").replaceChildren(f.svg());
+  });
 }
 
 // ---- p. 6: externality, size of MD and a Pigouvian tax ----
 {
-  const md = slider({min: 0, max: 4, step: 0.1, value: 2, label: "Marginal damage MD", digits: 1});
+  const md = slider({min: 0, max: 4, step: 0.1, value: 0, label: "Marginal damage MD", digits: 1});
   const tax = slider({min: 0, max: 4, step: 0.1, value: 0, label: "Pigouvian tax t", digits: 1});
   $("w6-ctl").append(md, tax);
   wire({md, tax}, ({md, tax}) => {
@@ -1490,23 +1508,35 @@ const Fig = (() => {
 }
 
 // ---- p. 8: Q1(a), PMB = 0 so the firm picks x = 0 ----
+// Curves appear one at a time; the solution (text, x = 0 and q*_eff on the graph) on its own toggle.
 {
-  const show = check({label: "Show the welfare loss of x = 0"});
-  $("w8-ctl").append(show);
-  wire({show}, ({show}) => {
+  const pmc = check({label: "PMC = SMC = c′(x)"});
+  const smb = check({label: "SMB = v′(x)"});
+  const pmb = check({label: "PMB = 0"});
+  const solution = check({label: "Show solution"});
+  const dwl = check({label: "Show the welfare loss of x = 0"});
+  $("w8-lines").append(pmc, smb, pmb);
+  $("w8-sol-ctl").append(solution);
+  $("w8-ctl").append(dwl);
+  wire({pmc, smb, pmb, solution, dwl}, ({pmc, smb, pmb, solution, dwl}) => {
     const f = Fig({w: 700, h: 590, xlab: "x (quantity)", ylab: "price", m: {t: 34, r: 170, b: 52, l: 52}});
-    if (show) {
+    // the welfare loss and q*_eff are only defined once both SMB and SMC are on the graph
+    const both = pmc && smb;
+    if (dwl && both) {
       f.area([[0, 0], [0, q1.smb(0)], [q1.xeff, q1.peff]], {fill: col.grey});
       f.text(1.6, 6.4, "DWL", {color: "#555", weight: 600, anchor: "middle"});
     }
-    f.guide(q1.xeff, q1.peff, {color: col.orange});
-    f.xtick(q1.xeff, "q^*_{eff}", {color: col.orange});
-    f.line(q1.smb, {to: 8, color: col.green, label: "SMB = v′(x)"});
-    f.line(q1.mc, {color: col.red, label: "PMC = SMC = c′(x)", anchor: "middle", dx: 0, dy: -12});
-    f.line(x => 0.06, {to: 9.6, color: col.blue, width: 4, label: "PMB = 0", dy: -10, dx: -60});
-    f.dot(0, 0, {color: col.blue});
+    if (solution && both) {
+      f.guide(q1.xeff, q1.peff, {color: col.orange});
+      f.xtick(q1.xeff, "q^*_{eff}", {color: col.orange});
+    }
+    if (smb) f.line(q1.smb, {to: 8, color: col.green, label: "SMB = v′(x)"});
+    if (pmc) f.line(q1.mc, {color: col.red, label: "PMC = SMC = c′(x)", anchor: "middle", dx: 0, dy: -12});
+    if (pmb) f.line(x => 0.06, {to: 9.6, color: col.blue, width: 4, label: "PMB = 0", dy: -10, dx: -60});
+    if (solution) f.dot(0, 0, {color: col.blue});
     $("w8-plot").replaceChildren(f.svg());
-    $("w8-out").innerHTML = show
+    $("w8-solution").style.display = solution ? "" : "none";
+    $("w8-out").innerHTML = dwl && both
       ? `<span class="swatch"></span>DWL = <b>${(0.5 * q1.smb(0) * q1.xeff).toFixed(1)}</b>` : "";
   });
 }
