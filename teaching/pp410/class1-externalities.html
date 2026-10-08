@@ -1082,8 +1082,8 @@ opacity: 0.55; cursor: pointer; }
 </div>
 </div></div>
 </section>
-<section id="q1-a-firm-chooses-x-0" class="slide level2">
-<h2>Q1 (a): firm chooses x = 0</h2>
+<section id="q1-a-how-much-would-the-firm-invest" class="slide level2">
+<h2>Q1 (a): how much would the firm invest?</h2>
 <div class="columns">
 <div class="column" style="width:57%;">
 <div id="w8-plot">
@@ -1096,15 +1096,6 @@ opacity: 0.55; cursor: pointer; }
 </div>
 <br>
 <div id="w8-sol-ctl">
-
-</div>
-<div id="w8-solution" style="display:none">
-<ul>
-<li>Firm invests x = 0</li>
-<li>Efficient: q*<sub>eff</sub> where SMB = SMC</li>
-</ul>
-</div>
-<div id="w8-ctl">
 
 </div>
 <div id="w8-out" class="readout">
@@ -1508,36 +1499,37 @@ const Fig = (() => {
 }
 
 // ---- p. 8: Q1(a), PMB = 0 so the firm picks x = 0 ----
-// Curves appear one at a time; the solution (text, x = 0 and q*_eff on the graph) on its own toggle.
+// Curves appear one at a time. "Show solution" marks q*_eq = 0 (where PMB meets PMC), q*_eff and
+// the welfare loss between them. Nothing on the slide gives away PMB = 0 before the PMB box is ticked.
 {
   const pmc = check({label: "PMC = SMC = c′(x)"});
   const smb = check({label: "SMB = v′(x)"});
-  const pmb = check({label: "PMB = 0"});
+  const pmb = check({label: "PMB"});
   const solution = check({label: "Show solution"});
-  const dwl = check({label: "Show the welfare loss of x = 0"});
   $("w8-lines").append(pmc, smb, pmb);
   $("w8-sol-ctl").append(solution);
-  $("w8-ctl").append(dwl);
-  wire({pmc, smb, pmb, solution, dwl}, ({pmc, smb, pmb, solution, dwl}) => {
+  wire({pmc, smb, pmb, solution}, ({pmc, smb, pmb, solution}) => {
     const f = Fig({w: 700, h: 590, xlab: "x (quantity)", ylab: "price", m: {t: 34, r: 170, b: 52, l: 52}});
-    // the welfare loss and q*_eff are only defined once both SMB and SMC are on the graph
+    // q*_eff and the welfare loss need both SMB and SMC on the graph
     const both = pmc && smb;
-    if (dwl && both) {
+    if (solution && both) {
       f.area([[0, 0], [0, q1.smb(0)], [q1.xeff, q1.peff]], {fill: col.grey});
       f.text(1.6, 6.4, "DWL", {color: "#555", weight: 600, anchor: "middle"});
-    }
-    if (solution && both) {
       f.guide(q1.xeff, q1.peff, {color: col.orange});
       f.xtick(q1.xeff, "q^*_{eff}", {color: col.orange});
     }
     if (smb) f.line(q1.smb, {to: 8, color: col.green, label: "SMB = v′(x)"});
     if (pmc) f.line(q1.mc, {color: col.red, label: "PMC = SMC = c′(x)", anchor: "middle", dx: 0, dy: -12});
     if (pmb) f.line(x => 0.06, {to: 9.6, color: col.blue, width: 4, label: "PMB = 0", dy: -10, dx: -60});
-    if (solution) f.dot(0, 0, {color: col.blue});
+    if (solution) {
+      // market outcome: the firm stops where PMB = 0 meets PMC, i.e. at the origin
+      f.dot(0, 0, {color: col.orange, r: 9});
+      f.xtick(0, "q^*_{eq}", {color: col.orange});
+    }
     $("w8-plot").replaceChildren(f.svg());
-    $("w8-solution").style.display = solution ? "" : "none";
-    $("w8-out").innerHTML = dwl && both
-      ? `<span class="swatch"></span>DWL = <b>${(0.5 * q1.smb(0) * q1.xeff).toFixed(1)}</b>` : "";
+    $("w8-out").innerHTML = solution && both
+      ? `q*<sub>eq</sub> = 0, q*<sub>eff</sub> = ${q1.xeff}<br>
+         <span class="swatch"></span>DWL = <b>${(0.5 * q1.smb(0) * q1.xeff).toFixed(1)}</b>` : "";
   });
 }
 
