@@ -999,14 +999,20 @@ margin-right: 0; }
 .readout .swatch { display: inline-block; width: 16px; height: 16px; background: #7f8c8d;
 opacity: 0.55; vertical-align: -2px; margin-right: 6px; }
 .note { font-size: 20px; color: #777; }
-.compact { font-size: 0.85em; }
+.reveal .paper-table { font-size: 19px; border-collapse: collapse; margin: 0 auto; }
+.reveal .paper-table caption { font-size: 19px; padding-bottom: 6px; caption-side: top; }
+.reveal .paper-table th, .reveal .paper-table td { padding: 1px 16px; border: 0; text-align: center; }
+.reveal .paper-table td:first-child { text-align: left; }
+.reveal .paper-table thead th { border-top: 2px solid #222; border-bottom: 1px solid #222; }
+.reveal .paper-table tbody tr:last-child td { border-bottom: 2px solid #222; }
+.reveal .paper-table tr.panel td { text-align: center; font-style: italic; padding-top: 8px; }
+.reveal .paper-table tr.se td { color: #555; }
+.reveal .paper-table tr.gap td { padding-top: 10px; }
 .pro { color: #2e8b3d; }
 .con { color: #c0392b; }
 .panel-title { font-size: 28px; font-weight: 600; margin: 0; }
 .title-ctl { position: absolute; top: 4px; right: 0; }
 .title-ctl .ctl-label { min-width: 0; }
-.takeaway { font-size: 26px; margin-top: 4px; }
-.takeaway .why { color: #c0392b; font-size: 22px; }
 .reveal .slides { user-select: none; -webkit-user-select: none; -webkit-touch-callout: none; }
 #ink { position: absolute; left: 0; top: 0; z-index: 40; pointer-events: none; }
 .ink-bar { position: fixed; left: 52px; bottom: 6px; z-index: 50; display: flex; gap: 6px; }
@@ -1123,15 +1129,12 @@ opacity: 0.55; cursor: pointer; }
 </section>
 <section id="q1-c-uncertain-costs" class="slide level2">
 <h2>Q1 (c): uncertain costs</h2>
-<div id="w10-theta" class="title-ctl">
+<div id="w10-b" class="title-ctl">
 
 </div>
 <div class="columns">
 <div class="column" style="width:50%;">
 <p><span class="panel-title">Quantity regulation</span></p>
-<div id="w10-ctl-quantity">
-
-</div>
 <div id="w10-plot-quantity">
 
 </div>
@@ -1140,9 +1143,6 @@ opacity: 0.55; cursor: pointer; }
 </div>
 </div><div class="column" style="width:50%;">
 <p><span class="panel-title">Price regulation</span></p>
-<div id="w10-ctl-price">
-
-</div>
 <div id="w10-plot-price">
 
 </div>
@@ -1150,31 +1150,71 @@ opacity: 0.55; cursor: pointer; }
 
 </div>
 </div></div>
-<div class="fragment takeaway">
-<p>→ if SMB is flatter, quantity regulation is worse &amp; price regulation is better<br> <span class="why">Why? Flat SMB (elastic demand): the price can’t change much anyway → mandate the price!</span></p>
-</div>
 </section>
-<section id="q1-d-its-about-the-slope-of-smb-relative-to-smc" class="slide level2">
-<h2>Q1 (d): it’s about the slope of SMB <em>relative</em> to SMC</h2>
-<div class="columns">
-<div class="column" style="width:62%;">
-<div id="w11-plot">
-
-</div>
-</div><div class="column" style="width:38%;">
-<p><br></p>
-<div id="w11-ctl">
-
-</div>
-<div class="compact">
+<section id="q2-a-chay-greenstone-2005-jpe" class="slide level2">
+<h2>Q2 (a): Chay, Greenstone (2005 JPE)</h2>
 <ul>
-<li>Quantity regulation: DWL falls as SMB gets steeper</li>
-<li>Price regulation: DWL rises as SMB gets steeper</li>
-<li>Curves cross where SMB and SMC are equally steep (Weitzman 1974)</li>
+<li><strong>Research Question</strong>: What is the value of clean air (or equivalently the damage from pollution)?</li>
+<li><strong>Motivation</strong>: Important to quantify damage of pollution externality</li>
+<li><strong>Empirical Strategy</strong>:
+<ul>
+<li>Use capitalization approach in house prices</li>
+<li>Use the introduction of the Clean Air Act in the mid 1970s as an exogenous change in pollution</li>
+<li>Compare house price evolution in nonattainment and attainment counties</li>
+</ul></li>
+<li><strong>Empirical Question</strong>: What is the causal effect of pollution on house prices?</li>
 </ul>
+</section>
+<section id="q2-b-identification" class="slide level2">
+<h2>Q2 (b): identification</h2>
+<div id="w12-plot">
+
 </div>
-<p><span class="note">Cost shock fixed at 1.5. DWL ratio price / quantity = (SMB slope / SMC slope)².</span></p>
-</div></div>
+<ul>
+<li><strong>Identification Assumption</strong>: House prices would have evolved in parallel between nonattainment and attainment counties</li>
+</ul>
+<p><span class="note">Source: Chay and Greenstone (2005), Figure 2. Mean TSPs concentrations, 1967–75, by 1972 attainment status.</span></p>
+</section>
+<section id="q2-b-main-findings" class="slide level2">
+<h2>Q2 (b): main findings</h2>
+<table class="paper-table" data-quarto-disable-processing="true">
+  <caption>Table 4: Impact of mid-decade TSPs nonattainment on 1970–80 changes in TSPs pollution and log housing values</caption>
+  <thead><tr><th></th><th>(1)</th><th>(2)</th><th>(3)</th><th>(4)</th></tr></thead>
+  <tbody>
+    <tr class="panel"><td colspan="5">A. Mean TSPs changes</td></tr>
+    <tr><td>TSPs nonattainment in 1975 or 1976</td><td>−9.96</td><td>−10.41</td><td>−9.57</td><td>−9.40</td></tr>
+    <tr class="se"><td></td><td>(1.78)</td><td>(1.90)</td><td>(1.94)</td><td>(2.02)</td></tr>
+    <tr><td>F-statistic TSPs nonattainment</td><td>31.3</td><td>29.9</td><td>24.4</td><td>21.5</td></tr>
+    <tr><td>R²</td><td>.04</td><td>.10</td><td>.19</td><td>.20</td></tr>
+    <tr class="panel"><td colspan="5">B. Log housing changes</td></tr>
+    <tr><td>TSPs nonattainment in 1975 or 1976</td><td>.036</td><td>.022</td><td>.026</td><td>.019</td></tr>
+    <tr class="se"><td></td><td>(.012)</td><td>(.009)</td><td>(.008)</td><td>(.008)</td></tr>
+    <tr><td>F-statistic TSPs nonattainment</td><td>8.5</td><td>6.2</td><td>9.3</td><td>6.4</td></tr>
+    <tr><td>R²</td><td>.01</td><td>.56</td><td>.66</td><td>.73</td></tr>
+    <tr class="gap"><td>County Data Book covariates</td><td>no</td><td>yes</td><td>yes</td><td>yes</td></tr>
+    <tr><td>Flexible form of county covariates</td><td>no</td><td>no</td><td>yes</td><td>yes</td></tr>
+    <tr><td>Region fixed effects</td><td>no</td><td>no</td><td>no</td><td>yes</td></tr>
+    <tr><td>Sample size</td><td>988</td><td>983</td><td>983</td><td>983</td></tr>
+  </tbody>
+</table>
+<ul>
+<li>Conclude that a 1% increase in pollution decreases house prices by 0.25%</li>
+<li>Clean Air Act increased house prices by $45 billion in treated counties</li>
+</ul>
+</section>
+<section id="q2-c-sorting" class="slide level2">
+<h2>Q2 (c): sorting</h2>
+<ul>
+<li>The problem arises when people value clean air differently, which is likely true</li>
+<li>Individuals who live in and move to cleaner areas are the ones that value it more</li>
+<li>Therefore house price movements represent the extra value of clean air to those individuals but not the average person</li>
+<li>From a theoretical perspective, policy should be based on the value for the average person</li>
+<li>Paper uses regression model to address the concern but hard to deal with convincingly</li>
+</ul>
+<p><strong>Further criticism of short run market-based approach</strong></p>
+<ul>
+<li>Individuals might be unaware of policy change</li>
+</ul>
 <script>
 // Fills the empty <div id="w..."> placeholders on the slides above. Plain JavaScript rather than
 // OJS, so the rendered HTML also works when opened as a local file (OJS needs a web server).
@@ -1280,11 +1320,11 @@ const Fig = (() => {
     return out;
   }
 
-  return ({w = 600, h = 420, xmax = 10.5, ymax = 10.5, xlab = "Q", ylab = "P", xlabDy = 38,
-           m = {t: 34, r: 120, b: 52, l: 52}} = {}) => {
+  return ({w = 600, h = 420, xmin = 0, xmax = 10.5, ymin = 0, ymax = 10.5, xlab = "Q", ylab = "P",
+           xlabDy = 38, m = {t: 34, r: 120, b: 52, l: 52}} = {}) => {
     const id = `econ-clip-${uid++}`;
-    const X = x => m.l + (x / xmax) * (w - m.l - m.r);
-    const Y = y => h - m.b - (y / ymax) * (h - m.t - m.b);
+    const X = x => m.l + ((x - xmin) / (xmax - xmin)) * (w - m.l - m.r);
+    const Y = y => h - m.b - ((y - ymin) / (ymax - ymin)) * (h - m.t - m.b);
     const pt = ([x, y]) => `${X(x).toFixed(1)},${Y(y).toFixed(1)}`;
     const dashAttr = dash => dash ? ` stroke-dasharray="${dash}"` : "";
     const areas = [], guides = [], clipped = [], lines = [], dots = [], labels = [];
@@ -1294,7 +1334,7 @@ const Fig = (() => {
       const s = (f(b) - f(a)) / (b - a);
       if (Math.abs(s) > 1e-9) {
         const at = y => a + (y - f(a)) / s;
-        const [lo, hi] = s > 0 ? [at(0), at(ymax)] : [at(ymax), at(0)];
+        const [lo, hi] = s > 0 ? [at(ymin), at(ymax)] : [at(ymax), at(ymin)];
         a = Math.max(a, lo);
         b = Math.min(b, hi);
       }
@@ -1303,7 +1343,7 @@ const Fig = (() => {
 
     const fig = {
       X, Y,
-      line(f, {from = 0, to = xmax, color = "#222", width = 3, dash = null, label = null,
+      line(f, {from = xmin, to = xmax, color = "#222", width = 3, dash = null, label = null,
                dx = 8, dy = 7, anchor = "start", size = 24} = {}) {
         const v = visible(f, from, to);
         if (!v) return fig;
@@ -1312,9 +1352,13 @@ const Fig = (() => {
         if (label) fig.text(v[1][0], v[1][1], label, {color, dx, dy, anchor, size});
         return fig;
       },
-      curve(f, {from = 0, to = xmax, n = 160, color = "#222", width = 3} = {}) {
+      curve(f, {from = xmin, to = xmax, n = 160, color = "#222", width = 3} = {}) {
         const ps = Array.from({length: n + 1}, (_, i) => from + (to - from) * i / n).map(x => [x, f(x)]);
-        clipped.push(`<polyline points="${ps.map(pt).join(" ")}" fill="none" stroke="${color}"
+        return fig.path(ps, {color, width});
+      },
+      // polyline through data points, clipped to the plot area
+      path(points, {color = "#222", width = 3} = {}) {
+        clipped.push(`<polyline points="${points.map(pt).join(" ")}" fill="none" stroke="${color}"
           stroke-width="${width}" stroke-linejoin="round"/>`);
         return fig;
       },
@@ -1329,7 +1373,7 @@ const Fig = (() => {
       },
       // dashed drop lines from (x, y) to both axes
       guide(x, y, {color = "#f39c12", width = 2} = {}) {
-        guides.push(`<polyline points="${pt([0, y])} ${pt([x, y])} ${pt([x, 0])}" fill="none"
+        guides.push(`<polyline points="${pt([xmin, y])} ${pt([x, y])} ${pt([x, ymin])}" fill="none"
           stroke="${color}" stroke-width="${width}" stroke-dasharray="6 5"/>`);
         return fig;
       },
@@ -1339,7 +1383,7 @@ const Fig = (() => {
       },
       // stick figure standing on the x-axis at x, about 1 unit (48px) tall
       person(x, {color = "#444"} = {}) {
-        const cx = X(x), y0 = Y(0) - 2;
+        const cx = X(x), y0 = Y(ymin) - 2;
         lines.push(`<g stroke="${color}" stroke-width="3" stroke-linecap="round" fill="none">
           <path d="M${cx - 8},${y0} L${cx},${y0 - 16} L${cx + 8},${y0} M${cx},${y0 - 16} L${cx},${y0 - 32}
                    M${cx - 10},${y0 - 26} L${cx + 10},${y0 - 26}"/>
@@ -1351,10 +1395,10 @@ const Fig = (() => {
           font-size="${size}" font-weight="${weight}" text-anchor="${anchor}">${rich(s, size)}</text>`);
         return fig;
       },
-      xtick: (x, s, opts = {}) => fig.text(x, 0, s, {anchor: "middle", dy: 34, ...opts}),
-      ytick: (y, s, opts = {}) => fig.text(0, y, s, {anchor: "end", dx: -10, dy: 8, ...opts}),
+      xtick: (x, s, opts = {}) => fig.text(x, ymin, s, {anchor: "middle", dy: 34, ...opts}),
+      ytick: (y, s, opts = {}) => fig.text(xmin, y, s, {anchor: "end", dx: -10, dy: 8, ...opts}),
       svg() {
-        const x0 = X(0), y0 = Y(0), xe = X(xmax) + 12, ye = Y(ymax) - 12;
+        const x0 = X(xmin), y0 = Y(ymin), xe = X(xmax) + 12, ye = Y(ymax) - 12;
         const axes = `<g stroke="#222" stroke-width="2.2">
             <line x1="${x0}" y1="${y0}" x2="${xe}" y2="${y0}"/><line x1="${x0}" y1="${y0}" x2="${x0}" y2="${ye}"/></g>
           <polygon points="${xe + 10},${y0} ${xe - 2},${y0 - 6} ${xe - 2},${y0 + 6}" fill="#222"/>
@@ -1580,7 +1624,7 @@ const Fig = (() => {
 // ---- p. 10: Q1(c), quantity vs. price regulation under cost uncertainty ----
 function uncertaintyFig(instrument, b, theta) {
   const d = 1, c = 5;  // SMC slope and the expected optimum (q̄ = p̄ = 5)
-  const f = Fig({w: 610, h: 390, m: {t: 36, r: 80, b: 46, l: 44}});
+  const f = Fig({w: 610, h: 470, m: {t: 36, r: 80, b: 46, l: 44}});
   const smb = q => c - b * (q - c), smc = k => q => c + d * (q - c) + k * theta;
   // efficient points under the high- and low-cost states
   const eff = k => { const q = c - k * theta / (b + d); return [q, smb(q)]; };
@@ -1617,47 +1661,51 @@ function uncertaintyFig(instrument, b, theta) {
 }
 
 {
-  const theta = slider({min: 0.5, max: 2.5, step: 0.05, value: 1.5, label: "Cost shock (SMC^H / SMC^L)"});
-  $("w10-theta").append(theta);
-  // one SMB-steepness slider per panel, so each instrument can be explored on its own
-  for (const instrument of ["quantity", "price"]) {
-    const b = slider({min: 0.1, max: 3, step: 0.05, value: 1, label: "Steepness of SMB"});
-    $(`w10-ctl-${instrument}`).append(b);
-    wire({b, theta}, ({b, theta}) => {
+  // SMC shifts up or down by a fixed 2.5 after the regulator has set q̄ or p̄. SMB steepness capped
+  // at 2 so the price-regulation triangles stay inside the axes at this shock size.
+  const theta = 2.5;
+  const b = slider({min: 0.1, max: 2, step: 0.05, value: 1, label: "Steepness of SMB"});
+  $("w10-b").append(b);
+  // one slider drives both panels, so the two instruments are always compared at the same SMB
+  wire({b}, ({b}) => {
+    for (const instrument of ["quantity", "price"]) {
       $(`w10-plot-${instrument}`).replaceChildren(uncertaintyFig(instrument, b, theta));
       $(`w10-out-${instrument}`).innerHTML =
         `<span class="swatch"></span>DWL in each state = <b>${dwl10(instrument, b, theta).toFixed(2)}</b>`;
-    });
-  }
+    }
+  });
 }
 
-// ---- Q1(d) summary: DWL of each instrument against the steepness of SMB ----
+// ---- Q2(b): Chay and Greenstone (2005), Figure 2 (static) ----
+// Mean TSPs (µg/m³) in 1967–75 by 1972 attainment status, transcribed from the data labels in the
+// paper's figure. Vertical line: regulations in force from 1972. Horizontal line: federal standard.
 {
-  const dslider = slider({min: 0.3, max: 2.5, step: 0.05, value: 1, label: "Steepness of SMC"});
-  $("w11-ctl").append(dslider);
-  wire({d: dslider}, ({d}) => {
-    const theta = 1.5, bmax = 3.5, ymax = 3;
-    const f = Fig({w: 740, h: 520, xmax: bmax, ymax, xlab: "steepness of SMB", ylab: "DWL in each state",
-                   xlabDy: 64, m: {t: 44, r: 40, b: 76, l: 60}});
-    f.area([[0, 0], [0, ymax], [d, ymax], [d, 0]], {fill: col.price, opacity: 0.07});
-    f.area([[d, 0], [d, ymax], [bmax, ymax], [bmax, 0]], {fill: col.quantity, opacity: 0.07});
-    f.seg(d, 0, d, ymax, {color: "#555", width: 1.5, dash: "5 5"});
-    f.xtick(d, "SMB as steep as SMC", {color: "#555"});
-    f.text(d / 2, ymax, "price reg. better", {anchor: "middle", dy: 26, color: col.price, weight: 600});
-    f.text((d + bmax) / 2, ymax, "quantity reg. better", {anchor: "middle", dy: 26, color: col.quantity, weight: 600});
-    f.curve(b => dwl10("quantity", b, theta, d), {color: col.quantity, width: 4});
-    f.curve(b => dwl10("price", b, theta, d), {color: col.price, width: 4});
-    // direct labels: quantity below its (low, flat) right end; price above-left of the point where
-    // its curve is still inside the plot
-    const bend = bmax - 0.05;
-    f.text(bend, dwl10("quantity", bend, theta, d), "quantity regulation",
-           {color: col.quantity, dy: 26, anchor: "end", weight: 600});
-    let bp = bend;
-    while (bp > 0.1 && dwl10("price", bp, theta, d) > 0.75 * ymax) bp -= 0.01;
-    f.text(bp, dwl10("price", bp, theta, d), "price regulation",
-           {color: col.price, dx: -6, dy: -14, anchor: "end", weight: 600});
-    $("w11-plot").replaceChildren(f.svg());
-  });
+  const years = [67, 68, 69, 70, 71, 72, 73, 74, 75];
+  const series = [
+    {name: "Nonattainment", color: col.red, v: [98.0, 97.0, 92.1, 94.4, 89.1, 78.3, 73.9, 70.1, 66.9]},
+    {name: "Attainment", color: col.blue, v: [63.3, 60.0, 57.3, 58.8, 54.0, 53.5, 52.9, 49.1, 48.4]}
+  ];
+  const f = Fig({w: 1100, h: 400, xmin: 66.6, xmax: 75.4, ymin: 40, ymax: 110, xlab: "",
+                 ylab: "mean TSPs (µg/m³)", m: {t: 40, r: 250, b: 50, l: 70}});
+  for (let y = 40; y <= 110; y += 10) {
+    if (y > 40) f.seg(66.6, y, 75.4, y, {color: "#e3e3e3", width: 1});
+    f.ytick(y, String(y), {size: 18});
+  }
+  for (const yr of years) f.xtick(yr, `19${yr}`, {size: 18, dy: 28});
+  f.seg(71, 40, 71, 110, {color: "#888", width: 1.5});
+  f.text(71, 110, "regulations in force →", {dx: 8, dy: 18, size: 17, color: "#666"});
+  f.seg(66.6, 75, 75.4, 75, {color: "#222", width: 2});
+  f.text(75.4, 75, "annual mean standard", {dx: 12, dy: 6, size: 19});
+  for (const s of series) {
+    const pts = years.map((yr, i) => [yr, s.v[i]]);
+    f.path(pts, {color: s.color, width: 3});
+    for (const [yr, v] of pts) {
+      f.dot(yr, v, {color: s.color, r: 5});
+      f.text(yr, v, v.toFixed(1), {anchor: "middle", dy: -12, size: 15, color: "#555"});
+    }
+    f.text(75.4, s.v.at(-1), s.name, {dx: 12, dy: 6, size: 20, weight: 600, color: s.color});
+  }
+  $("w12-plot").replaceChildren(f.svg());
 }
 
 // ---- Pen annotations ----
