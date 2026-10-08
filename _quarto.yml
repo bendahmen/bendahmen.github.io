@@ -1,5 +1,8 @@
 project:
   type: website
+  # self-contained teaching decks (rendered elsewhere), not linked from any page
+  resources:
+    - "teaching/**/*.html"
 
 website:
   title: "Ben Dahmen"
