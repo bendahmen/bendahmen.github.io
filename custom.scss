@@ -67,7 +67,7 @@ $navbar-fg: $main-color;
         display: flex;
         gap: 2em;
         padding: 1.5em;
-        align-items: flex-stat;
+        align-items: flex-start;
         
         @media (max-width: 768px) {
           flex-direction: column;
