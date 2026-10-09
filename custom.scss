@@ -177,3 +177,85 @@ ul.project-links {
 table.table-striped {
   margin-bottom: 2rem;
 }
+
+// Teaching page
+.course-banner {
+  background-color: $main-color-light;
+  border-left: 6px solid $accent-color;
+  padding: 1em 1.25em;
+  margin: 1.5em 0 1.25em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 0.5em;
+
+  .course-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: $main-color;
+  }
+
+  .course-meta {
+    font-size: 0.9rem;
+    color: $secondary-font-color;
+  }
+}
+
+.class-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1.25em;
+}
+
+.class-card {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border: 1px solid $main-color-light;
+  border-radius: 8px;
+  padding: 1em;
+  color: $font-color;
+  text-decoration: none;
+  transition: transform 0.15s ease, border-color 0.15s ease;
+
+  &:hover {
+    transform: translateY(-3px);
+    border-color: $main-color;
+    color: $font-color;
+
+    .class-open { text-decoration: underline; }
+  }
+
+  p { margin: 0; }
+
+  .class-thumb img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 0.75em;
+  }
+
+  .class-number {
+    font-size: 0.85rem;
+    color: $secondary-font-color;
+  }
+
+  .class-title {
+    font-size: 1.15rem;
+    font-weight: 600;
+    margin-bottom: 0.4em;
+  }
+
+  .class-description {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-bottom: 0.75em;
+    flex-grow: 1;
+  }
+
+  .class-open {
+    font-weight: bold;
+    color: $main-color;
+  }
+}

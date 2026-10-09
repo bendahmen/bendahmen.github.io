@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 110">
+  <rect width="240" height="110" fill="#FDF7F8"/>
+  <!-- axes -->
+  <path d="M20 10 V95 H225" fill="none" stroke="#666" stroke-width="1.5"/>
+  <!-- demand -->
+  <line x1="30" y1="18" x2="215" y2="88" stroke="#1B365D" stroke-width="3"/>
+  <!-- private supply (MPC) and social cost (MSC) -->
+  <line x1="30" y1="88" x2="215" y2="30" stroke="#8B1538" stroke-width="3"/>
+  <line x1="30" y1="62" x2="215" y2="4" stroke="#8B1538" stroke-width="3" stroke-dasharray="7 5"/>
+  <!-- deadweight loss triangle between MSC and D between social and private optimum -->
+  <polygon points="94,42 131,56 131,30" fill="#B8860B" fill-opacity="0.45"/>
+</svg>

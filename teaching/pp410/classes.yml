@@ -1,0 +1,6 @@
+# One entry per class; paths are relative to teaching/index.qmd
+- title: "Externalities"
+  class: 1
+  path: pp410/class1-externalities.html
+  image: ../img/teaching/externalities.svg
+  description: "Pigouvian taxes, abatement under uncertain costs, and Chay and Greenstone (2005) on air quality and house prices."

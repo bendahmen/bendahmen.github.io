@@ -1,0 +1,17 @@
+```{=html}
+<div class="class-grid">
+  <% for (const item of items) { %>
+    <a class="class-card" href="<%- item.path %>" <%= metadataAttrs(item) %>>
+      <% if (item.image) { %>
+        <div class="class-thumb"><img src="<%- item.image %>" alt=""></div>
+      <% } %>
+      <p class="class-number">Class <%= item.class %></p>
+      <p class="class-title"><%= item.title %></p>
+      <% if (item.description) { %>
+        <p class="class-description"><%= item.description %></p>
+      <% } %>
+      <span class="class-open">Open slides <i class="bi bi-arrow-right"></i></span>
+    </a>
+  <% } %>
+</div>
+```

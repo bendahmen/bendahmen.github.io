@@ -1,8 +1,9 @@
 project:
   type: website
-  # self-contained teaching decks (rendered elsewhere), not linked from any page
+  # self-contained teaching decks (rendered elsewhere), listed on teaching/index.qmd
   resources:
     - "teaching/**/*.html"
+    - "img/teaching/*"
 
 website:
   title: "Ben Dahmen"
@@ -14,6 +15,8 @@ website:
         text: Home
       - href: research/index.qmd
         text: Research
+      - href: teaching/index.qmd
+        text: Teaching
       - href: cv.qmd
         text: CV
     #foreground: "#393D3E"

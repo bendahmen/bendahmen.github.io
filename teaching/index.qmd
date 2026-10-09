@@ -1,0 +1,20 @@
+---
+title: "Teaching"
+listing:
+  - id: pp410
+    contents: pp410/classes.yml
+    sort: false
+    template: ../html/teaching/listing.ejs
+page-layout: full
+toc: false
+---
+
+Slides from the classes I teach. They are interactive HTML decks, so they work best on a laptop or tablet. Use the arrow keys to move through them and press `F` for full screen.
+
+::: {.course-banner}
+[PP410 · Public Economics for Public Policy]{.course-title}
+[LSE School of Public Policy · Class teacher · 2026/27]{.course-meta}
+:::
+
+::: {#pp410}
+:::
