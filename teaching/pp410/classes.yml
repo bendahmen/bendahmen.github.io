@@ -4,3 +4,8 @@
   path: pp410/class1-externalities.html
   image: ../img/teaching/externalities.svg
   description: "Pigouvian taxes, abatement under uncertain costs, and Chay and Greenstone (2005) on air quality and house prices."
+- title: "Unemployment Insurance"
+  class: 2
+  path: pp410/class2-unemployment-insurance.html
+  image: ../img/teaching/unemployment-insurance.svg
+  description: "Why insurance has value, the Baily–Chetty formula, Gruber (1997) on consumption smoothing, and Nekoei and Weber (2017) on UI durations."
