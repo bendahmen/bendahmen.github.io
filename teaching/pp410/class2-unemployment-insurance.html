@@ -988,7 +988,18 @@ margin-right: 0; }
 .econ-fig text[fill="white"] { stroke: none; }
 .ctl { display: flex; align-items: center; gap: 14px; font-size: 26px; margin: 6px 0; }
 .ctl-label { min-width: 240px; white-space: nowrap; }
-.ctl input[type=range] { flex: 1 1 auto; width: auto; min-width: 140px; max-width: 280px; accent-color: #444; cursor: pointer; }
+
+.ctl input[type=range] { flex: 1 1 auto; width: auto; min-width: 140px; max-width: 280px; cursor: pointer;
+-webkit-appearance: none; appearance: none; height: 44px; margin: 0;
+background: transparent; touch-action: none; -webkit-tap-highlight-color: transparent; }
+.ctl input[type=range]::-webkit-slider-runnable-track { height: 8px; border-radius: 4px;
+background: linear-gradient(to right, #444 var(--pct, 0%), #ccc var(--pct, 0%)); }
+.ctl input[type=range]::-webkit-slider-thumb { -webkit-appearance: none; width: 34px; height: 34px; margin-top: -13px;
+border-radius: 50%; background: #444; border: 3px solid white; box-shadow: 0 1px 4px rgba(0,0,0,0.45); }
+.ctl input[type=range]::-moz-range-track { height: 8px; border-radius: 4px; background: #ccc; }
+.ctl input[type=range]::-moz-range-progress { height: 8px; border-radius: 4px; background: #444; }
+.ctl input[type=range]::-moz-range-thumb { width: 28px; height: 28px; border-radius: 50%; background: #444;
+border: 3px solid white; box-shadow: 0 1px 4px rgba(0,0,0,0.45); }
 .ctl output { font-variant-numeric: tabular-nums; font-weight: 600; min-width: 48px; }
 .chk { font-size: 26px; cursor: pointer; display: block; margin: 6px 0; }
 .chk input { transform: scale(1.5); margin-right: 10px; }
@@ -1339,13 +1350,42 @@ function slider({min, max, step = 0.05, value, label, digits = 2, fmt = null}) {
     <input type="range" min="${min}" max="${max}" step="${step}"><output></output></div>`);
   const input = e.querySelector("input"), out = e.querySelector("output");
   e.setLabel = s => { e.querySelector(".ctl-label").innerHTML = richHTML(s); };
-  e.set = v => { input.value = v; e.value = +input.value; out.value = fmt ? fmt(e.value) : e.value.toFixed(digits); };
+  e.set = v => {
+    input.value = v;
+    e.value = +input.value;
+    out.value = fmt ? fmt(e.value) : e.value.toFixed(digits);
+    input.style.setProperty("--pct", `${100 * (e.value - input.min) / (input.max - input.min)}%`);
+  };
   e.setLabel(label);
   e.set(value);
   // the native input event bubbles to e after this handler has updated e.value
   input.addEventListener("input", () => e.set(input.value));
   // hand the keyboard back to reveal.js once released, so arrow keys / clicker change slides again
   input.addEventListener("change", () => input.blur());
+  // Touch: put the thumb under the finger on touch-down and follow the drag anywhere along the track.
+  // On iPad Safari the native slider only moves if you hit the thumb itself.
+  const thumb = 34;
+  const toValue = ev => {
+    const r = input.getBoundingClientRect(), k = r.width / input.offsetWidth;  // k: reveal.js scaling
+    const f = (ev.clientX - r.left - k * thumb / 2) / (r.width - k * thumb);
+    return +input.min + Math.min(1, Math.max(0, f)) * (input.max - input.min);
+  };
+  const drag = ev => { input.value = toValue(ev); input.dispatchEvent(new Event("input", {bubbles: true})); };
+  input.addEventListener("pointerdown", ev => {
+    if (ev.pointerType === "mouse") return;
+    ev.preventDefault();
+    try { input.setPointerCapture(ev.pointerId); } catch {}  // keeps the drag alive if the finger leaves the track
+    drag(ev);
+    const end = () => {
+      input.removeEventListener("pointermove", drag);
+      input.removeEventListener("pointerup", end);
+      input.removeEventListener("pointercancel", end);
+      input.blur();
+    };
+    input.addEventListener("pointermove", drag);
+    input.addEventListener("pointerup", end);
+    input.addEventListener("pointercancel", end);
+  });
   return e;
 }
 
