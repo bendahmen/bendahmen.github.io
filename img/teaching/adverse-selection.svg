@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 110">
+  <rect width="240" height="110" fill="#FDF7F8"/>
+  <!-- axes -->
+  <path d="M20 10 V95 H225" fill="none" stroke="#666" stroke-width="1.5"/>
+  <!-- DWL between demand and MC, from Q_eq (D = AC) to Q_eff (D = MC) -->
+  <polygon points="123.6,55.5 156.9,68 123.6,63" fill="#B8860B" fill-opacity="0.35"/>
+  <!-- demand -->
+  <line x1="24" y1="18" x2="210" y2="88" stroke="#1B365D" stroke-width="3"/>
+  <!-- AC above MC: adverse selection -->
+  <line x1="24" y1="48" x2="210" y2="62" stroke="#8B1538" stroke-width="3"/>
+  <line x1="24" y1="48" x2="210" y2="76" stroke="#B8860B" stroke-width="3"/>
+  <circle cx="123.6" cy="55.5" r="4" fill="#8B1538"/>
+</svg>
