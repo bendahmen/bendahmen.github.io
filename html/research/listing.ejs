@@ -48,7 +48,7 @@
             <% } %>
             <div class="project-details-listing">
               <ul class="project-links">
-                <% if (item['pub-info'].links) { %>
+                <% if (item['pub-info'] && item['pub-info'].links) { %>
                   <% for (const link of item['pub-info'].links) { %>
                     <li class="project-link">
                       <% if (link.local) { %>
@@ -66,7 +66,7 @@
           </div>
           <% if (item.plot) { %>
             <div class="project-plot">
-              <img src="<%- item.plot %>" alt="<%= item.title %> plot">
+              <img src="<%- item.plot %>" alt="">
             </div>
           <% } %>
         </div>

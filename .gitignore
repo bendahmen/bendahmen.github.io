@@ -5,3 +5,8 @@
 
 /.quarto/
 /_site/
+.DS_Store
+
+# Quarto intermediates
+**/*.quarto_ipynb
+/cv.html

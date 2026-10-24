@@ -2,19 +2,20 @@
 title: "Ben Dahmen"
 about:
   template: jolla
-  image: img/profile_cropped_transparent.png
+  image: img/profile.webp
+  image-alt: "Photo of Ben Dahmen"
   links:
     - icon: send
       text: b.a.dahmen@lse.ac.uk
       href: mailto:b.a.dahmen@lse.ac.uk
     - icon: globe
       text: LSE Page
-      href: https://www.lse.ac.uk/economics/people/research-students/ben-dahmen
+      href: https://www.lse.ac.uk/people/benjamin-dahmen
     - icon: twitter-x
       text: Ben Dahmen
       href: https://x.com/bendahmen27
     - icon: github
-      text: Github
+      text: GitHub
       href: https://github.com/bendahmen
 ---
 
