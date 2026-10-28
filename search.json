@@ -35,6 +35,13 @@
     "text": "VOLUNTEER WORK\nMaths Tutor  Team Up Sep 2021 – Jul 2022\nMentor  Project Access Sep 2022 – Now"
   },
   {
+    "objectID": "research/index.html",
+    "href": "research/index.html",
+    "title": "Research",
+    "section": "",
+    "text": "Inequality in Internships\n              \n            \n            \n              \n                \n                  with \n                  \n                    Omry Yoresh\n                  \n                \n              \n            \n            \n              \n                Rich university students in NL are 40% more likely to do an internship than poor students. In this paper we explore whether networks and opportunity costs contribute to this inequality, and how it affects income inequality later in life.\n              \n            \n            \n              \n                \n                  \n                    \n                      \n                        \n                      \n                           Slides\n                        \n                    \n                  \n                \n              \n            \n          \n          \n            \n              \n            \n          \n        \n      \n    \n      \n        \n          \n            \n              \n                Student Employment in England after the Maintenance Grant Removal\n              \n            \n            \n            \n              \n                Student employment increased after the UK removed the means-tested maintenance grant. In my paper I analyse whether the grant removal caused an increase in employment by comparing eligible and ineligible students.\n              \n            \n            \n              \n                \n                  \n                    \n                      \n                        \n                      \n                           PDF\n                        \n                    \n                  \n                \n              \n            \n          \n          \n            \n              \n            \n          \n        \n      \n    \n  \n\nNo matching items"
+  },
+  {
     "objectID": "teaching/index.html",
     "href": "teaching/index.html",
     "title": "Teaching",
@@ -42,11 +49,11 @@
     "text": "Slides from the classes I teach. They are interactive HTML decks, so they work best on a laptop or tablet. Use the arrow keys to move through them and press F for full screen.\n\nPP410 · Public Economics for Public Policy LSE School of Public Policy · Class teacher · 2026/27\n\n\n\n  \n    \n      \n        \n      \n      Class 1\n      Externalities\n      \n        Pigouvian taxes, abatement under uncertain costs, and Chay and Greenstone (2005) on air quality and house prices.\n      \n      Open slides \n    \n  \n    \n      \n        \n      \n      Class 2\n      Unemployment Insurance\n      \n        Why insurance has value, the Baily–Chetty formula, Gruber (1997) on consumption smoothing, and Nekoei and Weber (2017) on UI durations.\n      \n      Open slides \n    \n  \n    \n      \n        \n      \n      Class 3\n      Adverse Selection\n      \n        Who buys insurance at each price, the Einav–Finkelstein–Cullen framework with subsidies and mandates, and Finkelstein and McGarry (2006) on advantageous selection.\n      \n      Open slides \n    \n  \n    \n      \n        \n      \n      Class 4\n      Health Inequality over the Life Cycle\n      \n        Danesh, Kolstad, Parker and Spinnewijn (2024) on the chronic disease index: when the income gap in health opens up, and how much is biological aging versus health-based sorting.\n      \n      Open slides \n    \n  \n\nNo matching items"
   },
   {
-    "objectID": "research/index.html",
-    "href": "research/index.html",
-    "title": "Research",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Ben Dahmen",
     "section": "",
-    "text": "Inequality in Internships\n              \n            \n            \n              \n                \n                  with \n                  \n                    Omry Yoresh\n                  \n                \n              \n            \n            \n              \n                Rich university students in NL are 40% more likely to do an internship than poor students. In this paper we explore whether networks and opportunity costs contribute to this inequality, and how it affects income inequality later in life.\n              \n            \n            \n              \n                \n                  \n                    \n                      \n                        \n                      \n                           Slides\n                        \n                    \n                  \n                \n              \n            \n          \n          \n            \n              \n            \n          \n        \n      \n    \n      \n        \n          \n            \n              \n                Student Employment in England after the Maintenance Grant Removal\n              \n            \n            \n            \n              \n                Student employment increased after the UK removed the means-tested maintenance grant. In my paper I analyse whether the grant removal caused an increase in employment by comparing eligible and ineligible students.\n              \n            \n            \n              \n                \n                  \n                    \n                      \n                        \n                      \n                           PDF\n                        \n                    \n                  \n                \n              \n            \n          \n          \n            \n              \n            \n          \n        \n      \n    \n  \n\nNo matching items"
+    "text": "Hi there, I’m Ben!\nWhenever I’m not procrastinating by watching YouTube tutorials on how to make your own website, I am a PhD student at the LSE Econ Department. Check out my research or my CV, and feel free to get in touch via email while I’m still in that phase of my career where receiving an email is the highlight of my week."
   },
   {
     "objectID": "research/internships/index.html",
@@ -89,12 +96,5 @@
     "title": "Student Employment in England after the Maintenance Grant Removal",
     "section": "Figures",
     "text": "Figures\n\n\n\nStudent employment increased after the grant was removed"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Ben Dahmen",
-    "section": "",
-    "text": "Hi there, I’m Ben!\nWhenever I’m not procrastinating by watching YouTube tutorials on how to make your own website, I am a PhD student at the LSE Econ Department. Check out my research or my CV, and feel free to get in touch via email while I’m still in that phase of my career where receiving an email is the highlight of my week."
   }
 ]
