@@ -14,3 +14,8 @@
   path: pp410/class3-adverse-selection.html
   image: ../img/teaching/adverse-selection.svg
   description: "Who buys insurance at each price, the Einav–Finkelstein–Cullen framework with subsidies and mandates, and Finkelstein and McGarry (2006) on advantageous selection."
+- title: "Health Inequality over the Life Cycle"
+  class: 4
+  path: pp410/class4-health-inequality.html
+  image: ../img/teaching/health-inequality.svg
+  description: "Danesh, Kolstad, Parker and Spinnewijn (2024) on the chronic disease index: when the income gap in health opens up, and how much is biological aging versus health-based sorting."
