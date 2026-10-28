@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 110">
+  <rect width="240" height="110" fill="#FDF7F8"/>
+  <!-- axes -->
+  <path d="M20 10 V95 H225" fill="none" stroke="#666" stroke-width="1.5"/>
+  <!-- chronic disease index by age: high income (navy) and low income (maroon) drift apart -->
+  <path d="M24 84 C80 84 120 80 150 70 S195 40 210 26" fill="none" stroke="#1B365D" stroke-width="3"/>
+  <path d="M24 82 C70 80 110 66 140 52 S190 22 210 12" fill="none" stroke="#8B1538" stroke-width="3"/>
+  <!-- gap at a given age -->
+  <line x1="150" y1="48" x2="150" y2="70" stroke="#B8860B" stroke-width="3"/>
+  <circle cx="150" cy="70" r="4" fill="#1B365D"/>
+  <circle cx="150" cy="48" r="4" fill="#8B1538"/>
+</svg>
