@@ -1027,12 +1027,6 @@ font-size: 32px; align-items: baseline; margin: 0 0 14px; }
 .defs .k { font-weight: 700; text-align: right; }
 .bigfact { font-size: 46px; font-weight: 700; color: #8e44ad; margin-top: 22px; white-space: nowrap; }
 .bigfact small { display: block; font-size: 28px; font-weight: 600; }
-
-.mini-eq { display: flex; gap: 16px; align-items: flex-start; margin-top: 18px; }
-.mini-eq > div { text-align: center; }
-.mini-eq .sym { font-size: 38px; line-height: 1.2; }
-.mini-eq .num { font-size: 30px; font-weight: 600; font-variant-numeric: tabular-nums; }
-.mini-eq .m { color: #2f7ed8; } .mini-eq .as { color: #5d6d6e; } .mini-eq .d { color: #8e44ad; }
 .cards { display: flex; gap: 28px; margin: 22px 0 30px; }
 .card { flex: 1 1 0; background: #f6f7f9; border-top: 7px solid #444; border-radius: 12px;
 padding: 18px 24px 20px; font-size: 31px; line-height: 1.35; min-height: 185px;
@@ -1112,13 +1106,7 @@ opacity: 0.55; cursor: pointer; }
   <div id="w2-ans" class="bigfact answer">Q*<sub>eq</sub> &lt; Q*<sub>eff</sub></div>
 </div>
 <div id="w2-ctl" style="margin-top: 16px;"></div>
-<div id="w2-eq" class="mini-eq answer" style="margin-top: -40px;">
-  <div class="d"><div class="sym">ΔDWL</div><div class="num" id="w2-dd"></div></div>
-  <div><div class="sym">=</div></div>
-  <div class="m"><div class="sym">M</div><div class="num" id="w2-dm"></div></div>
-  <div><div class="sym">−</div></div>
-  <div class="as"><div class="sym">DWL<sub>AS</sub></div><div class="num" id="w2-das"></div></div>
-</div>
+<div id="w2-cmp" class="bigfact answer" style="margin-top: 10px;"></div>
 </div></div>
 </section>
 <section id="q1-finkelstein-and-mcgarry-2006-aer" class="slide level2">
@@ -1197,7 +1185,6 @@ const el = s => { const t = document.createElement("template"); t.innerHTML = s.
 // "SMC^H" / "q^*_{eff}" -> HTML with <sup>/<sub>, for control labels
 const richHTML = s => String(s).replace(/([\^_])(?:\{([^}]*)\}|(.))/g,
   (_, op, grp, ch) => op === "^" ? `<sup>${grp ?? ch}</sup>` : `<sub>${grp ?? ch}</sub>`);
-const signed = (v, d) => `${v >= 0 ? "+" : "−"}${Math.abs(v).toFixed(d)}`;
 
 // ---- Controls: large sliders, toggles and checkboxes that read well on a projector ----
 // Each control carries its current value in .value and fires "input" when it changes.
@@ -1445,6 +1432,12 @@ const mAS = (() => {
   const b = (D(qeq) - D(qeff)) / (qeff - qeq / 2), a = D(qeff) + b * qeff;
   return efcModel([9, -0.07], [a, -b], [a, -b / 2]);
 })();
+// Same market with MC = a − bQ pivoting around the efficient point (Q_eff = 80) and AC = a − bQ/2: the steeper
+// MC, the stronger adverse selection and the lower Q_eq. With linear curves both DWL triangles are
+// (0.07 − b)/2 times a squared base, (Q_eff − Q_eq)² vs (100 − Q_eff)², so the mandate beats the
+// market for b > 0.028. mAS has b ≈ 0.038.
+const bAS = mAS.MC(0) - mAS.MC(1);
+const asModel = b => { const a = mAS.D(80) + 80 * b; return efcModel([9, -0.07], [a, -b], [a, -b / 2]); };
 // PS3 Q1, advantageous selection (MC > AC): Q_eff = 58 < Q_eq = 74
 const mFM = efcModel([9, -0.07], [2, 0.05], [2, 0.025]);
 
@@ -1461,9 +1454,9 @@ function curves(f, m, {D = true, MC = true, AC = true, width = 4} = {}) {
   if (MC) f.line(m.MC, {to: 100, color: col.MC, width, label: "MC"});
   if (AC) f.line(m.AC, {to: 100, color: col.AC, width, label: "AC"});
 }
-const markEq = (f, m) => {
+const markEq = (f, m, {ticks = true} = {}) => {
   f.guide(m.qeq, m.peq, {color: col.AC}).dot(m.qeq, m.peq, {color: col.AC});
-  f.xtick(m.qeq, "Q^*_{eq}", {color: col.AC}).ytick(m.peq, "P^*_{eq}", {color: col.AC});
+  if (ticks) f.xtick(m.qeq, "Q^*_{eq}", {color: col.AC}).ytick(m.peq, "P^*_{eq}", {color: col.AC});
 };
 const markEff = (f, m) => {
   f.guide(m.qeff, m.peff, {color: col.MC}).dot(m.qeff, m.peff, {color: col.MC});
@@ -1475,7 +1468,8 @@ function shadeDwl(f, m, q, {fill = col.grey, label = "DWL", color = "#555", pos 
   const d = m.dwl(q);
   if (d.area < 0.05) return d;
   f.area(d.poly, {fill, opacity: 0.5});
-  if (!label) return d;
+  // no room for a label in a sliver
+  if (!label || d.area < 2) return d;
   const cx = (2 * q + m.qeff) / 3, o = {color, weight: 700, size: 22};
   if (pos === "edge") f.text(q, (m.D(q) + m.MC(q)) / 2, label,
                              {...o, anchor: q < m.qeff ? "end" : "start", dx: q < m.qeff ? -10 : 10, dy: 8});
@@ -1548,23 +1542,38 @@ const swatch = (c, o = 0.5) => `<span class="swatch" style="background:${c}; opa
 
 // ---- Policy widget: a price wedge (subsidy / tax) or a quantity rule (mandate / ban) ----
 // wedge: +1 subsidy (insurers get p + s), −1 tax (consumers pay p + t). Quantity rule fixes Q at qRule.
-function policyWidget(id, m, {wedgeName, sign, sym, max, ruleName, qRule, ruleLabel, compareAS = false, dwlPos = "edge", rulePos = "below", checks = false, render}) {
+// ruleSlider {label, min, max, value, model}: under the quantity rule, a slider in the wedge slider's spot
+// whose value v sets the market, model(v). dwlPos can be a function of the market.
+function policyWidget(id, base, {wedgeName, sign, sym, max, ruleName, qRule, ruleLabel, ruleSlider = null, compareAS = false, dwlPos = "edge", rulePos = "below", checks = false, render}) {
   const pol = toggle({options: ["No policy", wedgeName, ruleName], value: "No policy"});
   const s = slider({min: 0, max, step: 0.05, value: 0, label: `${wedgeName} ${sym}`});
   $(`${id}-ctl`).append(pol, s);
   // checks: without a policy, equilibrium / efficient / DWL are switched on one at a time
   const ctls = {pol, s};
+  if (ruleSlider) {
+    const {label, min, max: hi, value} = ruleSlider;
+    // no number next to it: only the shape of the curves matters
+    ctls.r = slider({min, max: hi, step: (hi - min) / 100, value, label, fmt: () => ""});
+    $(`${id}-ctl`).append(ctls.r);
+  }
   if (checks) {
     Object.assign(ctls, {eq: check({label: "Equilibrium"}), eff: check({label: "Efficient"}), dw: check({label: "DWL"})});
     $(`${id}-chk`).append(ctls.eq, ctls.eff, ctls.dw);
   }
-  wire(ctls, ({pol, s: w, eq = true, eff = true, dw = true}) => {
+  wire(ctls, ({pol, s: w, r, eq = true, eff = true, dw = true}) => {
     s.style.visibility = pol === wedgeName ? "visible" : "hidden";
+    const reshape = ruleSlider && pol === ruleName;
+    if (ruleSlider) {
+      s.style.display = reshape ? "none" : "";
+      ctls.r.style.display = reshape ? "" : "none";
+    }
+    const m = reshape ? ruleSlider.model(r) : base;
+    const pos = typeof dwlPos === "function" ? dwlPos(m) : dwlPos;
     const f = efcFig(), out = {pol, eq, eff};
     if (pol !== "No policy" || eff) markEff(f, m);
     if (pol === "No policy") {
       if (eq) markEq(f, m);
-      out.as = dw ? shadeDwl(f, m, m.qeq, {pos: dwlPos}).area : m.dwl(m.qeq).area;
+      out.as = dw ? shadeDwl(f, m, m.qeq, {pos}).area : m.dwl(m.qeq).area;
     } else if (pol === wedgeName) {
       const q = m.qWedge(sign * w), pc = m.D(q), pi = m.AC(q);  // consumer price, insurer price
       if (w > 0) {
@@ -1591,7 +1600,11 @@ function policyWidget(id, m, {wedgeName, sign, sym, max, ruleName, qRule, ruleLa
       if (Math.abs(q - m.qeff) > 6 && q < 95) f.xtick(q, `Q_${sym}`, {color: col.purple});
     } else {
       // keep the market's own DWL on the graph for comparison
-      if (compareAS) { markEq(f, m); shadeDwl(f, m, m.qeq, {label: "DWL_{AS}", pos: dwlPos}); }
+      // equilibrium ticks only where they clear the Q_eff / P_eff ones
+      if (compareAS) {
+        markEq(f, m, {ticks: m.qeff - m.qeq > 14});
+        out.as = shadeDwl(f, m, m.qeq, {label: "DWL_{AS}", pos}).area;
+      }
       out.rule = shadeDwl(f, m, qRule, {fill: col.blue, color: col.blue, label: ruleLabel, pos: rulePos}).area;
     }
     curves(f, m);
@@ -1601,17 +1614,18 @@ function policyWidget(id, m, {wedgeName, sign, sym, max, ruleName, qRule, ruleLa
 }
 
 // Recap: equilibrium, efficiency and DWL, then subsidy or mandate under adverse selection.
-// The mandate view compares both DWL triangles; the slider and the ΔDWL equation share one spot.
+// Under the mandate a slider sets how steep MC (and AC) is: the mandate's DWL M beats the market's
+// DWL_AS only when adverse selection is strong enough.
 policyWidget("w2", mAS, {
   wedgeName: "Subsidy", sign: 1, sym: "s", max: 2.5, ruleName: "Mandate", qRule: 100, ruleLabel: "M",
-  compareAS: true, dwlPos: posAS, checks: true,
-  render: ({pol, eq, eff}) => {
+  ruleSlider: {label: "MC slope", min: 0.005, max: 0.06, value: bAS, model: asModel},
+  // DWL_AS label just below MC, a third of the way from Q_eq to Q_eff (at the default slope as before)
+  compareAS: true, dwlPos: m => { const x = (2 * m.qeq + m.qeff) / 3; return [x, m.MC(x) - 0.75]; }, checks: true,
+  render: ({pol, eq, eff, as, rule}) => {
     $("w2-ans").classList.toggle("on", eq && eff);
-    $("w2-eq").classList.toggle("on", pol === "Mandate");
-    const as = mAS.dwl(mAS.qeq).area, mand = mAS.dwl(100).area;
-    $("w2-dm").textContent = mand.toFixed(1);
-    $("w2-das").textContent = as.toFixed(1);
-    $("w2-dd").textContent = signed(mand - as, 1);
+    $("w2-cmp").classList.toggle("on", pol === "Mandate");
+    if (pol === "Mandate") $("w2-cmp").innerHTML =
+      `<span style="color:${col.blue}">M</span> ${rule < as ? "&lt;" : "&gt;"} DWL<sub>AS</sub>`;
   }
 });
 // PS3 Q1(c): ban or Pigouvian tax under advantageous selection
