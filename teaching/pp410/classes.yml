@@ -19,3 +19,8 @@
   path: pp410/class4-health-inequality.html
   image: ../img/teaching/health-inequality.svg
   description: "Danesh, Kolstad, Parker and Spinnewijn (2024) on the chronic disease index: when the income gap in health opens up, and how much is biological aging versus health-based sorting."
+- title: "Retirement Saving and Pension Design"
+  class: 5
+  path: pp410/class5-retirement-saving.html
+  image: ../img/teaching/retirement-saving.svg
+  description: "Chetty et al. (2014) on active vs passive savers, mandates vs subsidies, and Kolsrud, Landais, Reck and Spinnewijn (2024) on the Baily–Chetty trade-off in Sweden's pension reform."

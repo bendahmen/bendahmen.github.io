@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 110">
+  <rect width="240" height="110" fill="#FDF7F8"/>
+  <!-- axes -->
+  <path d="M20 10 V95 H225" fill="none" stroke="#666" stroke-width="1.5"/>
+  <!-- event: switch to a firm with a higher employer pension -->
+  <line x1="118" y1="12" x2="118" y2="95" stroke="#B8860B" stroke-width="2" stroke-dasharray="5 4"/>
+  <!-- employer pension (navy) jumps; other saving (maroon) barely moves -->
+  <path d="M26 66 H110 L126 32 H218" fill="none" stroke="#1B365D" stroke-width="3"/>
+  <path d="M26 82 H218" fill="none" stroke="#8B1538" stroke-width="3"/>
+  <circle cx="126" cy="32" r="4" fill="#1B365D"/>
+  <circle cx="126" cy="82" r="4" fill="#8B1538"/>
+</svg>
