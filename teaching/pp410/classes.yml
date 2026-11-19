@@ -24,3 +24,8 @@
   path: pp410/class5-retirement-saving.html
   image: ../img/teaching/retirement-saving.svg
   description: "Chetty et al. (2014) on active vs passive savers, mandates vs subsidies, and Kolsrud, Landais, Reck and Spinnewijn (2024) on the Baily–Chetty trade-off in Sweden's pension reform."
+- title: "School Vouchers and Class Quality"
+  class: 6
+  path: pp410/class6-vouchers-class-quality.html
+  image: ../img/teaching/vouchers-class-quality.svg
+  description: "Budget sets with free public schools vs vouchers and which families gain, and Chetty et al. (2011) on Project STAR: kindergarten class quality, teachers vs peers, and fade-out."
