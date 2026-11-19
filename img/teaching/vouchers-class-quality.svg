@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 110">
+  <rect width="240" height="110" fill="#FDF7F8"/>
+  <!-- axes: education (x) vs consumption (y) -->
+  <path d="M20 10 V95 H225" fill="none" stroke="#666" stroke-width="1.5"/>
+  <line x1="75" y1="40" x2="75" y2="95" stroke="#999" stroke-width="1" stroke-dasharray="3 3"/>
+  <!-- free public school: flat part, drop, private line (navy) -->
+  <path d="M20 40 H75 V62 L140 95" fill="none" stroke="#1B365D" stroke-width="3"/>
+  <!-- voucher: lower flat part, higher private line (maroon) -->
+  <path d="M20 50 H75 L165 95" fill="none" stroke="#8B1538" stroke-width="3"/>
+  <!-- indifference curve tangent to the voucher line (gold) -->
+  <polyline points="86,18.3 92,35.9 98,48.0 104,56.8 110,63.5 116,68.8 122,73.0 128,76.5 134,79.4 140,81.9 146,84.0 152,85.9 158,87.5 164,88.9 170,90.2 176,91.4 182,92.4 188,93.4 194,94.2 200,95.0" fill="none" stroke="#B8860B" stroke-width="2.5"/>
+  <circle cx="130" cy="77.5" r="4" fill="#8B1538"/>
+  <circle cx="75" cy="40" r="4" fill="#1B365D"/>
+</svg>
