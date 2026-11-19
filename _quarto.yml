@@ -4,6 +4,8 @@ project:
   resources:
     - "teaching/**/*.html"
     - "img/teaching/*"
+  # adds a "back to all slides" link to each deck in _site
+  post-render: _scripts/deck-back-button.py
 
 website:
   title: "Ben Dahmen"
