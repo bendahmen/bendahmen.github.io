@@ -29,3 +29,8 @@
   path: pp410/class6-vouchers-class-quality.html
   image: ../img/teaching/vouchers-class-quality.svg
   description: "Budget sets with free public schools vs vouchers and which families gain, and Chetty et al. (2011) on Project STAR: kindergarten class quality, teachers vs peers, and fade-out."
+- title: "The EITC and Labor Supply"
+  class: 7
+  path: pp410/class7-eitc-labor-supply.html
+  image: ../img/teaching/eitc-labor-supply.svg
+  description: "Labor supply responses to the EITC, Eissa and Liebman (1996) on TRA86 with diff-in-diff and triple differences, and Kleven's (2020) fifty-year reappraisal."
