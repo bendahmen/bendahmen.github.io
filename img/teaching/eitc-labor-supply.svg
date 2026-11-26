@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 110">
+  <rect width="240" height="110" fill="#FDF7F8"/>
+  <!-- axes: earned income (x) vs credit (y) -->
+  <path d="M20 10 V95 H225" fill="none" stroke="#666" stroke-width="1.5"/>
+  <!-- EITC schedule before TRA86 (navy) and after (maroon): phase-in, plateau, phase-out -->
+  <path d="M20 95 L77 52 H94 L145 95" fill="none" stroke="#1B365D" stroke-width="3"/>
+  <path d="M20 95 L86 32 H124 L216 95" fill="none" stroke="#8B1538" stroke-width="3"/>
+  <!-- TRA86 marker (gold) -->
+  <line x1="105" y1="16" x2="105" y2="95" stroke="#B8860B" stroke-width="2" stroke-dasharray="4 3"/>
+</svg>

@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://bendahmen.github.io/teaching/index.html</loc>
-    <lastmod>2026-11-19T18:40:34.680Z</lastmod>
-  </url>
-  <url>
-    <loc>https://bendahmen.github.io/research/internships/index.html</loc>
-    <lastmod>2026-11-19T18:40:34.680Z</lastmod>
-  </url>
-  <url>
-    <loc>https://bendahmen.github.io/research/student_employment/index.html</loc>
-    <lastmod>2026-11-19T18:40:34.680Z</lastmod>
-  </url>
-  <url>
     <loc>https://bendahmen.github.io/cv.html</loc>
-    <lastmod>2026-11-19T18:40:34.635Z</lastmod>
+    <lastmod>2026-11-26T21:27:59.323Z</lastmod>
   </url>
   <url>
     <loc>https://bendahmen.github.io/research/index.html</loc>
-    <lastmod>2026-11-19T18:40:34.680Z</lastmod>
+    <lastmod>2026-11-26T21:27:59.398Z</lastmod>
   </url>
   <url>
     <loc>https://bendahmen.github.io/index.html</loc>
-    <lastmod>2026-11-19T18:40:34.675Z</lastmod>
+    <lastmod>2026-11-26T21:27:59.391Z</lastmod>
+  </url>
+  <url>
+    <loc>https://bendahmen.github.io/teaching/index.html</loc>
+    <lastmod>2026-11-26T21:27:59.398Z</lastmod>
+  </url>
+  <url>
+    <loc>https://bendahmen.github.io/research/student_employment/index.html</loc>
+    <lastmod>2026-11-26T21:27:59.398Z</lastmod>
+  </url>
+  <url>
+    <loc>https://bendahmen.github.io/research/internships/index.html</loc>
+    <lastmod>2026-11-26T21:27:59.398Z</lastmod>
   </url>
 </urlset>
